@@ -42,3 +42,4 @@ def test_final_report_is_sourced_and_carries_required_sections():
     assert "Frozen thresholds and plan parameters" in report
     assert "reports/gates/phase_13_gate.txt" in report
     assert "single recorded evaluations" in report
+    assert "Release tag `v0.1`" in report

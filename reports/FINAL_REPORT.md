@@ -18,10 +18,10 @@ Predictions are computational hypotheses, not experimental findings.
 | 10 | DONE | `ml/phase-10-pipeline` | `792ebbe6638ee401dca8533597a34f51419b8fba` | https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-10-pipeline?expand=1 |
 | 11 | DONE | `ml/phase-11-dashboard` | `666a47ca71852f9c729c474aaa2ae07309aad65b` | https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-11-dashboard?expand=1 |
 | 12 | DONE | `ml/phase-12-docs` | `fc79ca5aabd403f459625e9229456b790b492b25` | https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-12-docs?expand=1 |
-| 13 | DONE | `ml/phase-13-release` | `25ec683f0af38189260e8d2a8458fdf8a6ed5b53` | https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-13-release?expand=1 |
+| 13 | DONE | `ml/phase-13-release` | `ddb62390d50e2ebd79ccc4845ea9345ae1070f60` | https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-13-release?expand=1 |
 
 Phase statuses, branch names, SHAs, and links are read from `reports/STATE.json`. A compare URL is supplied where a pull request was not created. The human owner merges PRs; this workflow did not merge them or push to `main`.
-
+Release tag `v0.1` points to `ddb62390d50e2ebd79ccc4845ea9345ae1070f60`; `models-frozen` remains at `28e7506a841d953a6bea4891fe3fdd797d733883`. Remote tag/branch SHA evidence is recorded in `reports/release.json`.
 ## Deliverables
 
 | Phase | Status | Deliverable paths |

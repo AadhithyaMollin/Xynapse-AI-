@@ -32,6 +32,7 @@ def render() -> str:
     verification = _json("reports/tables/phase_13_summary.json")
     config = yaml.safe_load((ROOT / "configs/config.yaml").read_text(encoding="utf-8"))
     frozen = _json("models/esm2_t12_35M/FROZEN.json")
+    release = _json("reports/release.json")
 
     phases = []
     for number, record in state["phases"].items():
@@ -101,7 +102,8 @@ def render() -> str:
         *phases,
         "",
         "Phase statuses, branch names, SHAs, and links are read from `reports/STATE.json`. A compare URL is supplied where a pull request was not created. The human owner merges PRs; this workflow did not merge them or push to `main`.",
-        "",
+        f"Release tag `{release['release_tag']}` points to `{release['release_tag_remote_sha']}`; `models-frozen` remains at `{release['frozen_tag_sha']}`. Remote tag/branch SHA evidence is recorded in `reports/release.json`.",
+        ""
         "## Deliverables",
         "",
         "| Phase | Status | Deliverable paths |",
