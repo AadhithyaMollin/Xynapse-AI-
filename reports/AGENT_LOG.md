@@ -333,3 +333,7 @@ Predictions are computational hypotheses, not experimental findings.
 - Deviations/open limitations: ClinVar remains limited to the two verified proteins in the teammate table and is exempted from the 10-training-protein threshold because it is external-only. ProteinGym direction remains mixed and provisional. No model fitting or test evaluation occurred.
 - Branch: `ml/phase-03-labels`; phase code commit `e361ac52259f789021f41d00f3ce996ab9786ad3`; remote SHA equality and compare URL are recorded in `reports/gates/phase_03_push_verification.txt`. Compare URL: `https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-03-labels?expand=1`.
 - Status: Phase 3 DONE and pushed. Phase 4 begins next.
+
+## Phase 4 — Tier-1 features
+
+**Phase 04 STARTED.** The build will use `facebook/esm2_t12_35M_UR50D` only, with resumable per-protein caches and a single preloaded model instance. Teammate position tables remain read-only; this phase only audits their availability and emits a BIO request.

@@ -51,6 +51,7 @@ def score_protein(
     model_name: str,
     batch_size: int = 16,
     device: str | None = None,
+    model_components: tuple | None = None,
 ) -> pd.DataFrame:
     """Score every single substitution of `sequence` (19 * L rows, 1-based).
 
@@ -65,7 +66,7 @@ def score_protein(
     if batch_size < 1:
         raise ValueError(f"batch_size must be >= 1, got {batch_size}")
 
-    tokenizer, model = load_esm(model_name, device)
+    tokenizer, model = model_components if model_components is not None else load_esm(model_name, device)
     model_device = next(model.parameters()).device
 
     # token index p == residue position p (the tokenizer puts <cls> at 0)

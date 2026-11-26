@@ -54,3 +54,6 @@
 - `train_proteins`: 92 proteins; ddG labels: 52,801 rows/60 proteins; function labels: 76,777 rows/30 proteins; external ClinVar: 646 rows/2 proteins. The ClinVar 2-protein count follows the source-mapping restriction and is not a training-protein shortfall. Source: `reports/tables/phase_03_label_build_summary.json`.
 - Duplicate reliable Tsuboyama observations: 92 rows collapsed into 52,801 mutation keys; written X→P sign check is +1.389019036 kcal/mol over 2,620 rows. Source: `reports/tables/phase_03_label_build_summary.json` and `reports/tables/sign_check_megascale_labels.csv`.
 - Gate PASS; 66 tests passed in 11.67 s; build runtime 8.58 s. Source: `reports/gates/phase_03_gate.txt` and build summary. Branch `ml/phase-03-labels` pushed; commit SHA and compare URL are recorded in `reports/gates/phase_03_push_verification.txt`.
+
+### Phase 4 — Tier-1 features
+- STARTED. Uses the configured ESM-2 35M development model only; per-protein score caches make reruns resumable. Teammate data remain read-only.
