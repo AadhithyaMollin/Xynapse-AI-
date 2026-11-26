@@ -1,0 +1,7 @@
+Predictions are computational hypotheses, not experimental findings.
+PASS: fresh pipeline output contains all expected artifacts | files=['predictions.parquet', 'features_tier1.parquet', 'pipeline_summary.json']
+PASS: pipeline mutation keys match Phase 9 P60484 rows | rows=7657
+PASS: pipeline ddg_pred matches frozen Phase 9 predictions within 1e-6 | max_abs_delta=0
+PASS: pipeline p_impact matches frozen Phase 9 predictions within 1e-6 | max_abs_delta=0
+PASS: pipeline model identifier, class and disclaimers are consistent | rows=7657; tiers=['tier1']
+PASS: pytest -q passes | 108 passed in 9.91s
