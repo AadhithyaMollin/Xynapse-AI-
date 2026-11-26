@@ -385,4 +385,16 @@ Predictions are computational hypotheses, not experimental findings.
 - Validation: Phase 7 gate 16/16 PASS; pytest 91 passed in 8.81 s. No held-out test results were produced.
 - Runtime deviation: the first training invocation exceeded the terminal's 660 s limit after all 20 search configurations, OOF predictions, and calibration artifacts had been written, but before final metrics/export. Two further invocations hit the same slow MCC-threshold scan. Diagnosed quadratic threshold scoring; replaced it with a tested sorted cumulative-count implementation. Final resumable pass reused all 20 search configs and cached folds; finalization took 1.091266 s. The original uncached search runtime was not persisted, so its exact duration is unresolved; the saved 0.001756 s is cache lookup time, not the original search duration.
 - Direction caveat remains: assay-level ProteinGym signs were mixed in the Phase 2 precheck; project label orientation is provisional despite the pooled/overall Phase 4 check.
-- Git publication pending Phase 7 push.
+- Git: branch `ml/phase-07-function`, commit `3c3d85715976e544aff35e799732eeb1944bafdb`; remote SHA matched. Compare URL: https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-07-function?expand=1.
+- Search runtime resolution: exact original duration remains unavailable; the run artifacts show 20 complete configs, and saved summary distinguishes active search from the 0.001756-second cache lookup.
+
+## Phase 08 — thresholds, freeze, and one-time test
+
+**Phase 08 STARTED.** Thresholds must be derived from saved OOF predictions. No test split, case-study assay, or ClinVar external set has been evaluated.
+
+**Phase 08 FREEZE — PHASE REPORT (pre-test evaluation).**
+- Files: `src/xynapse/thresholds.py`, `src/xynapse/freeze.py`, `scripts/derive_thresholds.py`, `scripts/gates/gate_phase_08.py`, `tests/test_freeze_thresholds.py`; additive threshold values in `configs/config.yaml`; `models/esm2_t12_35M/FROZEN.json`; `reports/tables/threshold_evidence.csv`, `phase_08_freeze_summary.json`, and gate output.
+- OOF-derived config thresholds: `ddg_damaging=0.676349007871`; `ddg_stabilizing=0.0210001491369`; `p_impact_high=0.58747815343`; `p_impact_low=null`. Evidence: 9,354 ddG-damaging positives and 440 stabilizing positives among 45,411 stability OOF rows; function threshold evidence from 71,962 calibrated OOF rows. `p_impact_low` is null because no OOF cutoff met NPV >= 0.90. Thus the specified tolerated class cannot be assigned; no alternative threshold was substituted.
+- Freeze: five model artifacts inventoried and SHA-256 checked; ESM model `facebook/esm2_t12_35M_UR50D`; threshold and feature inventories embedded. Freeze derivation runtime 0.098527 s, source `reports/tables/phase_08_freeze_summary.json`.
+- Validation: Phase 8 gate 10/10 PASS; pytest 96 passed in 8.47 s. Test registry is absent/empty and no `test_*.csv` exists. No test evaluation performed.
+- Git publication and immutable `models-frozen` tag are pending. After push/tag, the owner waived CP2; evaluate held-out, case-study DMS, and ClinVar once each through `evaluate_once`, without tuning or re-evaluation.

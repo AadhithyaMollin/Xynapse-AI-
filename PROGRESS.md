@@ -78,4 +78,10 @@
 - Calibrated grouped OOF: AUROC 0.642152509, AUPRC 0.599066818, MCC 0.276047653 at 0.587478153, Brier 0.226514778. Isotonic selected over Platt (grouped cross-fit Brier 0.228731878 vs 0.228999995). Sources: `reports/tables/function_oof_metrics.csv`, `function_calibration_method_scores.csv`.
 - Gate 16/16 PASS; pytest 91 passed in 8.81 s. OOF covers all training rows; no test scores. Source: `reports/gates/phase_07_gate.txt`.
 - Timing caveat: original uncached 20-config search runtime was not persisted before the 660 s terminal timeout; do not confuse the 0.001756 s cached lookup with search execution. See Phase 7 entry in `reports/AGENT_LOG.md`. The optimization reduced MCC-threshold finalization from quadratic to sorted cumulative counts.
-- ProteinGym assay-direction evidence remains mixed; function-label mapping is provisional. Publication pending on `ml/phase-07-function`.
+- ProteinGym assay-direction evidence remains mixed; function-label mapping is provisional.
+- Phase 7 pushed on `ml/phase-07-function`, commit `3c3d85715976e544aff35e799732eeb1944bafdb`; compare URL: https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-07-function?expand=1.
+
+### Phase 8 — thresholds and freeze
+- Freeze complete locally; no test evaluations yet. OOF-derived thresholds: ddG damaging 0.676349007871, ddG stabilizing 0.0210001491369, p_impact_high 0.58747815343, p_impact_low null. There were 9,354 damaging and 440 stabilizing positives in the 45,411 stability OOF rows. No calibrated function OOF threshold met NPV >=0.90, so the tolerated class cannot be assigned under the specified rule. Source: `reports/tables/threshold_evidence.csv`.
+- `FROZEN.json` fingerprints five model artifacts; model is `facebook/esm2_t12_35M_UR50D`. Phase 8 gate 10/10 PASS; pytest 96 passed in 8.47 s; freeze step 0.098527 s. No test evaluation; registry empty. Source: `reports/gates/phase_08_gate.txt`, `reports/tables/phase_08_freeze_summary.json`.
+- Freeze-branch publication/tag pending. After that, the owner waived CP2; test sets will be evaluated exactly once with `evaluate_once`.

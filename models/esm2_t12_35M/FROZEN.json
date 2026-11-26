@@ -1,0 +1,48 @@
+{
+  "esm_model": "facebook/esm2_t12_35M_UR50D",
+  "esm_model_short": "esm2_t12_35M",
+  "feature_lists": {
+    "function": [
+      "esm_llr",
+      "esm_wt_logp",
+      "esm_mut_logp",
+      "blosum62",
+      "d_hydropathy",
+      "d_volume",
+      "d_charge",
+      "esm_pos_mean_llr",
+      "esm_pos_min_llr",
+      "rel_position",
+      "wt",
+      "mut"
+    ],
+    "stability": [
+      "esm_llr",
+      "esm_wt_logp",
+      "esm_mut_logp",
+      "blosum62",
+      "d_hydropathy",
+      "d_volume",
+      "d_charge",
+      "esm_pos_mean_llr",
+      "esm_pos_min_llr",
+      "rel_position",
+      "wt",
+      "mut"
+    ]
+  },
+  "frozen_at_utc": "2026-11-26T12:27:27.501075+00:00",
+  "model_files_sha256": {
+    "function_logistic_tier1.joblib": "554433453d26ab00a3cde8b12b95f6bd9d042e6be780e88418bc40ca159f391f",
+    "function_tier1.joblib": "e7a8d9f5f3d0e19450f7bfd178c9dd37aab3123d77c22b53634478bf53d3ded2",
+    "function_tier1.json": "1bef735ea8af95ef3fb23ae7a097517bfe13fc73f7d15866869920e130d00a4a",
+    "stability_tier1.joblib": "901ba951209ca7ec34b35774ea8d43a3d0a6c775cf724690e72e5bf09da5b57a",
+    "stability_tier1.json": "d156f364f053c15234d1f1203f17edfcc75064f8df0c68aad54f0575d18b0b43"
+  },
+  "thresholds": {
+    "ddg_damaging": 0.676349007871,
+    "ddg_stabilizing": 0.0210001491369,
+    "p_impact_high": 0.58747815343,
+    "p_impact_low": null
+  }
+}
