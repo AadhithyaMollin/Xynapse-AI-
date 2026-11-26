@@ -1,0 +1,45 @@
+project: xynapse-ai
+seed: 42
+paths:
+  raw: data/raw
+  interim: data/interim
+  processed: data/processed
+  external: data/external
+  models: models
+  reports: reports
+esm:
+  dev_model: facebook/esm2_t12_35M_UR50D    # fast iteration
+  final_model: facebook/esm2_t33_650M_UR50D # verify memory on your runtime
+  max_len: 1022
+conventions:
+  ddg_unit: kcal/mol
+  ddg_sign: "positive = destabilizing, negative = stabilizing"
+  numbering: "1-based UniProt canonical numbering"
+splits:
+  identity: 0.30   # MMseqs2 clustering identity for grouped splits
+  coverage: 0.80
+  test_fraction_of_clusters: 0.15
+thresholds:        # DO NOT hand-tune on the test set. Filled later from validation folds only.
+  ddg_damaging: 0.676349007871
+  ddg_stabilizing: 0.0210001491369
+  p_impact_high: 0.58747815343
+  p_impact_low: null
+ranking:
+  ddg_label_cutoff: 1.0
+mechanism:
+  buried_rsasa: 0.25
+  allosteric: false
+confidence:
+  plddt_low: 70
+  n_eff_low: 5
+reliability:
+  ci_max: 0.5
+  dg_min: -1.0
+  dg_max: 5.0
+  min_singles_per_domain: 100
+sampling:
+  stability_domains: 60
+  function_assays: 30
+  seed: 42
+function:
+  max_assay_length: 500

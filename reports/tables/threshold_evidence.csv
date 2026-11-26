@@ -1,0 +1,5 @@
+threshold,value,criterion,mcc,n_rows,n_positive,target_npv,observed_npv,n_assigned_negative
+ddg_damaging,0.6763490078708566,MCC max for true ddG >= 1 kcal/mol,0.4050346421193798,45411,9354,,,0
+ddg_stabilizing,0.02100014913691953,MCC max for true ddG <= -1 kcal/mol; null if positives < 50,0.07270275496913511,45411,440,,,0
+p_impact_high,0.5874781534295241,MCC max for OOF calibrated function probability,0.27604765310840523,71962,31050,,,0
+p_impact_low,,largest OOF probability cutoff with NPV >= 0.90; null if unreachable,,71962,31050,0.9,,0

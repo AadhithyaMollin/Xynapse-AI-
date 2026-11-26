@@ -1,0 +1,52 @@
+{
+  "disclaimer": "Predictions are computational hypotheses, not experimental findings.",
+  "esm_model": "facebook/esm2_t12_35M_UR50D",
+  "files": {
+    "demo_data/predictions.parquet": {
+      "bytes": 1036086,
+      "sha256": "6ae3b4bc96e0aeb0c2c11b2cf6fa7ba8b9b5ffb91f121748ed141eaa024a2d41"
+    },
+    "demo_data/structures/P04637.pdb": {
+      "bytes": 254339,
+      "sha256": "5a7051e8f97848d43b3747268825b29cafb5fa99d2e3fff6f58efcdb74e74cc3"
+    },
+    "demo_data/structures/P60484.pdb": {
+      "bytes": 275804,
+      "sha256": "58f527376b98af06d772564ef154ac1206d9e90ea53d28e9886e50521aa67d2c"
+    }
+  },
+  "generated_at_utc": "2026-11-26T13:09:22.514089+00:00",
+  "prediction_rows": 15124,
+  "proteins": {
+    "P04637": 7467,
+    "P60484": 7657
+  },
+  "structures": [
+    {
+      "accession": "P60484",
+      "api_url": "https://alphafold.ebi.ac.uk/api/prediction/P60484",
+      "bytes": 275804,
+      "content_type": null,
+      "latest_version": 6,
+      "model_entity_id": "AF-P60484-F1",
+      "path": "demo_data/structures/P60484.pdb",
+      "pdb_url": "https://alphafold.ebi.ac.uk/files/AF-P60484-F1-model_v6.pdb",
+      "sequence_end": 403,
+      "sequence_start": 1,
+      "sha256": "58f527376b98af06d772564ef154ac1206d9e90ea53d28e9886e50521aa67d2c"
+    },
+    {
+      "accession": "P04637",
+      "api_url": "https://alphafold.ebi.ac.uk/api/prediction/P04637",
+      "bytes": 254339,
+      "content_type": null,
+      "latest_version": 6,
+      "model_entity_id": "AF-P04637-F1",
+      "path": "demo_data/structures/P04637.pdb",
+      "pdb_url": "https://alphafold.ebi.ac.uk/files/AF-P04637-F1-model_v6.pdb",
+      "sequence_end": 393,
+      "sequence_start": 1,
+      "sha256": "5a7051e8f97848d43b3747268825b29cafb5fa99d2e3fff6f58efcdb74e74cc3"
+    }
+  ]
+}

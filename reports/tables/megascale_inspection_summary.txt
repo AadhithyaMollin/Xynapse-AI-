@@ -1,0 +1,14 @@
+Predictions are computational hypotheses, not experimental findings.
+Dataset rows classified: 1841285
+Name census:
+  wild_type_like: 1562; examples=1A32.pdb | 1B7I.pdb | 1B7J.pdb
+  single_substitution: 1025049; examples=1A32.pdb_A45D | 1A32.pdb_A45E | 1A32.pdb_A45F
+  other: 814674; examples=1C99.pdb | 1C99.pdb_wte | 1C99.pdb_wth
+Single_DMS domains listed: 983
+Domains appearing in Dataset 1: 983
+Domains with reliable WT reference: 858
+Domains with verified numbering (exact or constant offset): 979
+Domains failing numbering: 4; examples=2B88.pdb | 2KZI.pdb | 3HGL.pdb | 5GHB.pdb
+Eligible domains with at least 100 reliable singles: 856
+Reliable X->P substitutions in eligible domains: 36712
+Pooled mean project ddG for X->P: 1.40110918 kcal/mol

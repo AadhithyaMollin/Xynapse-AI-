@@ -1,0 +1,47 @@
+{
+  "disclaimer": "Predictions are computational hypotheses, not experimental findings.",
+  "files": {
+    "docs/model_cards/function_tier1.md": {
+      "bytes": 1720,
+      "sha256": "80104e91266e2ea48a4b4956d063415a9d2e2caa951fcd88cda9828479d218ca"
+    },
+    "docs/model_cards/stability_tier1.md": {
+      "bytes": 1469,
+      "sha256": "c0a3e0cdccc6634283a5fb068c87672c522aca4436d0a6025a66cd5d6131c84c"
+    },
+    "reports/tables/function_calibration_curve.csv": {
+      "bytes": 1210,
+      "sha256": "9d97dc7792f42c3294a848894265bb961f7ad655478d45cdea491b5c0920aff1"
+    },
+    "reports/tables/function_oof_metrics.csv": {
+      "bytes": 1141,
+      "sha256": "89efc25ff78ab2e902f4b76e9fe959db19586d1cf55b30dc39c1e981c2283f12"
+    },
+    "reports/tables/function_per_assay_auroc.csv": {
+      "bytes": 13590,
+      "sha256": "2b3d782863942fce54503817e83e64f822c58d7ce6132576128284556cc59e04"
+    },
+    "reports/tables/label_prevalence.csv": {
+      "bytes": 252,
+      "sha256": "9393aa6f44636dd0b1cba68a2fcabf56d9853ee0c0d2b037b8cbfdd82ac7c606"
+    },
+    "reports/tables/rank_class_counts.csv": {
+      "bytes": 144,
+      "sha256": "4e9641ff1edf1d5f8afd2b87b8a7c72afaa6f4fb17db5db399ec42e7e4b968b1"
+    },
+    "reports/tables/split_summary.csv": {
+      "bytes": 541,
+      "sha256": "be1e96bc3ecf263aaa435ade02d1a13f1ff7c57db1fe44b14ebe965a0971ab87"
+    },
+    "reports/tables/stability_oof_metrics.csv": {
+      "bytes": 704,
+      "sha256": "bc7ccfdcff5e03fb3956c75f4a8914e2a00ce246d93bee12d2a91c98f4ace0f5"
+    },
+    "reports/tables/stability_per_protein_oof.csv": {
+      "bytes": 20989,
+      "sha256": "21a6683749c8a1dcf0026b957cbfa642b13983dbdaec7510d82817fb40d8488a"
+    }
+  },
+  "generated_from_saved_outputs": true,
+  "generator": "scripts/make_reports.py"
+}

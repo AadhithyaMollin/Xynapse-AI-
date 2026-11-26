@@ -1,0 +1,9 @@
+{
+  "app_test_exceptions": 0,
+  "csv_rows": 7657,
+  "data_dir": "data/processed",
+  "disclaimer": "Predictions are computational hypotheses, not experimental findings.",
+  "headless_server_smoke_seconds": 4.36187650001375,
+  "headless_server_started": true,
+  "p60484_rows": 7657
+}

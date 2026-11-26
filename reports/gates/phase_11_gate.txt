@@ -1,0 +1,7 @@
+Predictions are computational hypotheses, not experimental findings.
+PASS: Streamlit AppTest runs without exception and shows the disclaimer | exceptions=0
+PASS: heatmap, mutation table, and CSV download controls render | charts=1; tables=3
+PASS: P60484 heatmap and complete 19 x L mutation table render | table_rows=7657
+PASS: CSV download payload contains every P60484 mutation row | csv_rows=7657; expected=7657
+PASS: headless Streamlit server starts and stops cleanly | port=52565; smoke_seconds=4.362; exit=0
+PASS: pytest -q passes | 113 passed in 10.04s

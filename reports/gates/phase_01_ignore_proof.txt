@@ -1,0 +1,3 @@
+.gitignore:21:!models/*/*.json	models/esm2_t12_35M/model_metadata.json
+.gitignore:25:!demo_data/**	demo_data/predictions.parquet
+.gitignore:28:reports/tables/*.parquet	reports/tables/split_summary.parquet

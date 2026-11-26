@@ -1,0 +1,24 @@
+{
+  "disclaimer": "Predictions are computational hypotheses, not experimental findings.",
+  "esm_model": [
+    "facebook/esm2_t12_35M_UR50D"
+  ],
+  "input_merge_seconds": 0.05293654199340381,
+  "model_inference_and_ranking_seconds": 0.9948859589931089,
+  "n_proteins": 2,
+  "n_rows": 15124,
+  "output": "data/processed/predictions.parquet",
+  "rank_class_counts": {
+    "potentially damaging": 4102,
+    "uncertain": 11022
+  },
+  "rank_counts": "reports/tables/rank_class_counts.csv",
+  "rows_per_protein": {
+    "P04637": 7467,
+    "P60484": 7657
+  },
+  "tier": [
+    "tier1"
+  ],
+  "total_seconds": 1.060487834009109
+}

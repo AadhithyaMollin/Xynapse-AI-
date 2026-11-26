@@ -1,0 +1,30 @@
+{
+  "disclaimer": "Predictions are computational hypotheses, not experimental findings.",
+  "fresh_output_files": [
+    "predictions.parquet",
+    "features_tier1.parquet",
+    "pipeline_summary.json"
+  ],
+  "max_abs_ddg_delta_vs_phase_09": 0.0,
+  "max_abs_p_impact_delta_vs_phase_09": 0.0,
+  "n_rows": 7657,
+  "pipeline_summary": {
+    "data_tier": "tier1_plus_available_position_tables",
+    "disclaimer": "Predictions are computational hypotheses, not experimental findings.",
+    "esm_model": "facebook/esm2_t12_35M_UR50D",
+    "esm_model_short": "esm2_t12_35M",
+    "n_mutations": 7657,
+    "prediction_output": "/private/var/folders/ff/vqxm8q9n377fr4dgx4mvt9xr0000gn/T/zed-agent-terminal-dJVR0z/xynapse-phase10-p60484-q9u8r577/predictions.parquet",
+    "protein_id": "P60484",
+    "sequence_length": 403,
+    "sequence_source": "fasta_cache",
+    "stage_seconds": {
+      "esm_and_tier1_seconds": 18.137191707995953,
+      "frozen_model_prediction_seconds": 0.767724665987771,
+      "position_join_seconds": 0.007419917004881427,
+      "sequence_fetch_cache_seconds": 0.00018383399583399296
+    },
+    "total_seconds": 18.91252012498444
+  },
+  "protein_id": "P60484"
+}

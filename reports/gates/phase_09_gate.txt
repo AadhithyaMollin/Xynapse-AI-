@@ -1,0 +1,12 @@
+Predictions are computational hypotheses, not experimental findings.
+PASS: validator passes for complete prediction contract | rows=15124
+PASS: prediction rows equal 19 times protein length for every protein | actual={'P04637': 7467, 'P60484': 7657}; expected={'P04637': 7467, 'P60484': 7657}
+PASS: confidence fields follow frozen training-length limits for Tier 1 | ddg={'P04637': 'low', 'P60484': 'low'}; function={'P04637': 'medium', 'P60484': 'medium'}
+PASS: ddG and function probabilities are finite for all mutations | rows=15124
+PASS: all rows have a rank class and required evidence disclaimer | rows=15124
+PASS: all prediction rows use Tier 1 and one configured ESM-2 model | tiers=['tier1']; models=['facebook/esm2_t12_35M_UR50D']
+PASS: mechanism flags re-derive exactly from mutation annotations and frozen rules | rows_checked=15124
+PASS: rank class count CSV matches prediction rows | rows=4
+PASS: frozen artifacts remain unchanged and configured thresholds match freeze | problems=[]
+PASS: prediction summary exists and reports the complete case-study set | n_rows=15124; n_proteins=2
+PASS: pytest -q passes | 105 passed in 9.35s

@@ -1,0 +1,67 @@
+On branch ml/phase-01-baseline
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   .gitignore
+	new file:   .python-version
+	new file:   AGENT_BRIEF.md
+	new file:   PROGRESS.md
+	modified:   README.md
+	new file:   app/.gitkeep
+	new file:   colab_setup.sh
+	new file:   configs/config.yaml
+	new file:   local_setup.sh
+	new file:   logs/.gitkeep
+	new file:   models/.gitkeep
+	new file:   notebooks/.gitkeep
+	new file:   pytest.ini
+	new file:   reports/AGENT_LOG.md
+	new file:   reports/STATE.json
+	new file:   reports/env_snapshot.json
+	new file:   reports/env_snapshot_stdout.txt
+	new file:   reports/gates/phase_01_gate.txt
+	new file:   reports/gates/phase_01_helper_tests.txt
+	new file:   reports/pytest_phase0.txt
+	new file:   reports/tables/inspect_tables_stdout.txt
+	new file:   reports/tables/nan_report_mut_features.csv
+	new file:   reports/tables/teammate_table_inspection.csv
+	new file:   reports/tables/teammate_value_checks.csv
+	new file:   reports/tables/validate_tables_phase1.txt
+	new file:   requirements.lock
+	new file:   requirements.txt
+	new file:   scripts/check_esm.py
+	new file:   scripts/env_snapshot.py
+	new file:   scripts/gates/gate_phase_01.py
+	new file:   scripts/inspect_tables.py
+	new file:   scripts/pre_push_check.py
+	new file:   scripts/run_esm.py
+	new file:   scripts/run_join.py
+	new file:   scripts/run_physchem.py
+	new file:   scripts/setup_check.py
+	new file:   scripts/sync_to_shared.py
+	new file:   scripts/validate_tables.py
+	new file:   scripts/zenodo_fetch.py
+	new file:   src/xynapse/__init__.py
+	new file:   src/xynapse/esm_scoring.py
+	new file:   src/xynapse/join_features.py
+	new file:   src/xynapse/mutations.py
+	new file:   src/xynapse/physchem.py
+	new file:   src/xynapse/schema.py
+	new file:   src/xynapse/validate.py
+	new file:   tests/__init__.py
+	new file:   tests/test_esm_scoring.py
+	new file:   tests/test_join_features.py
+	new file:   tests/test_mutations.py
+	new file:   tests/test_phase1_helpers.py
+	new file:   tests/test_physchem.py
+	new file:   tests/test_schema.py
+	new file:   tests/test_validate.py
+
+* ml/phase-01-baseline
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main
+ec67e6e Initial commit
+origin	https://github.com/AadhithyaMollin/Xynapse-AI-.git (fetch)
+origin	https://github.com/AadhithyaMollin/Xynapse-AI-.git (push)
+ec67e6ecd32cb2dedb75811fd597552d7f68a492	refs/heads/main

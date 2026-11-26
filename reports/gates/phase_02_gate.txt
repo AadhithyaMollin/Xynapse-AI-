@@ -1,0 +1,18 @@
+Predictions are computational hypotheses, not experimental findings.
+PASS: data card megascale.md exists and has disclaimer | docs/data_cards/megascale.md
+PASS: data card proteingym.md exists and has disclaimer | docs/data_cards/proteingym.md
+PASS: data card clinvar.md exists and has disclaimer | docs/data_cards/clinvar.md
+PASS: download manifests match file size and SHA-256 | 5 raw inputs checked
+PASS: Tsuboyama project-sign check is positive | mean over saved per-domain means=1.376408192; 855 rows
+PASS: stability proposal has at least 10 eligible domains and at most 60 sampled | eligible=856; proposed=60
+PASS: Tsuboyama inspection summary records the positive pooled X-to-P check | source reports/tables/megascale_inspection_summary.txt
+PASS: function proposal has at least 10 and at most 30 assays | proposed=30
+PASS: function assays have one selected record per exact target sequence | distinct sequence hashes=30
+PASS: function proposal excludes Stability category | proposed=30
+PASS: case-study assays are retained separately | case-study assay rows=6
+PASS: ProteinGym direction precheck is saved and its mixed-sign limitation is explicit | n=5; pooled mean=0.121844446; status=mixed_assay_signs
+PASS: ClinVar mapped WT mismatch rates are at most 5% | genes=2; parsed=2659
+PASS: ClinVar external counts have at least 10 rows and agree with summary | retained variants=646
+PASS: ClinVar review mapping and all audit tables exist | mapped statuses=10
+PASS: no raw or processed data paths are staged | staged data paths=[]
+PASS: pytest -q passes | 61 passed in 10.69s

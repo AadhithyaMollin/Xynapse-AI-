@@ -1,0 +1,16 @@
+Predictions are computational hypotheses, not experimental findings.
+PASS: one cluster assignment per protein; observed MMseqs TSV parsed | proteins=92; clusters=79
+PASS: train and test clusters are disjoint | train=65; test=14
+PASS: every training cluster occurs in exactly one CV validation fold | folds=[0, 1, 2, 3, 4]
+PASS: test proteins have no CV fold | test proteins=14
+PASS: case-study and ClinVar-test clusters are absent from training | held-out proteins=2; held-out clusters=2
+PASS: ddG label table validates and has unique keys | rows=52801; proteins=60; validator=PASS
+PASS: ddG training set has at least 10 proteins | train_proteins=52; train_rows=45411; test_rows=7390
+PASS: ddG joined training table has cluster/split/CV columns | rows=52801
+PASS: ddG training table does not split a cluster across CV folds | training_clusters=40
+PASS: function label table validates and has unique keys | rows=76777; proteins=30; validator=PASS
+PASS: function training set has at least 10 proteins | train_proteins=26; train_rows=71962; test_rows=4815
+PASS: function joined training table has cluster/split/CV columns | rows=76777
+PASS: function training table does not split a cluster across CV folds | training_clusters=25
+PASS: split summary and data card exist | summary_rows=14
+PASS: pytest -q passes | 76 passed in 8.93s

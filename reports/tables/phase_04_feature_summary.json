@@ -1,0 +1,14 @@
+{
+  "runtime_seconds": 195.4035060830065,
+  "n_proteins": 92,
+  "n_feature_rows": 216258,
+  "esm_model": "facebook/esm2_t12_35M_UR50D",
+  "esm_model_short": "esm2_t12_35M",
+  "device": "mps",
+  "cache_reused_count": 7,
+  "tier1_nan_count": 0,
+  "direction_assays": 30,
+  "mean_spearman_project_label_esm_llr": -0.2848694930797581,
+  "direction_pass": true,
+  "teammate_manifest_tier2_available": 2
+}

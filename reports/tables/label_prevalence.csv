@@ -1,0 +1,4 @@
+dataset,n_rows,n_proteins,positive_definition,n_positive,prevalence
+labels_ddg,52801,60,ddg >= 1.0 kcal/mol,11366,0.21526107460085983
+labels_function,76777,30,label == 1,32724,0.4262213944280188
+external_clinvar,646,2,label == 1,482,0.7461300309597523

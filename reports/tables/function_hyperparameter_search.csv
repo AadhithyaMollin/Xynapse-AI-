@@ -1,0 +1,21 @@
+config_id,params,mean_grouped_cv_auprc,completed_inner_folds,status,cache_reused
+1,"{""colsample_bytree"": 0.6, ""learning_rate"": 0.02, ""min_child_samples"": 50, ""n_estimators"": 800, ""num_leaves"": 7, ""reg_lambda"": 0, ""subsample"": 0.7}",0.6542133556269457,3,complete,True
+2,"{""colsample_bytree"": 1.0, ""learning_rate"": 0.05, ""min_child_samples"": 100, ""n_estimators"": 800, ""num_leaves"": 15, ""reg_lambda"": 0, ""subsample"": 0.7}",0.6300982504342729,3,complete,True
+3,"{""colsample_bytree"": 0.6, ""learning_rate"": 0.05, ""min_child_samples"": 100, ""n_estimators"": 400, ""num_leaves"": 63, ""reg_lambda"": 0, ""subsample"": 1.0}",0.6259166975259743,3,complete,True
+4,"{""colsample_bytree"": 0.8, ""learning_rate"": 0.1, ""min_child_samples"": 20, ""n_estimators"": 400, ""num_leaves"": 63, ""reg_lambda"": 0, ""subsample"": 0.7}",0.6129212551836237,3,complete,True
+5,"{""colsample_bytree"": 1.0, ""learning_rate"": 0.2, ""min_child_samples"": 50, ""n_estimators"": 200, ""num_leaves"": 7, ""reg_lambda"": 1, ""subsample"": 1.0}",0.6376003064096272,3,complete,True
+6,"{""colsample_bytree"": 0.6, ""learning_rate"": 0.2, ""min_child_samples"": 20, ""n_estimators"": 800, ""num_leaves"": 7, ""reg_lambda"": 10, ""subsample"": 1.0}",0.6211844473326971,3,complete,True
+7,"{""colsample_bytree"": 0.6, ""learning_rate"": 0.1, ""min_child_samples"": 20, ""n_estimators"": 800, ""num_leaves"": 31, ""reg_lambda"": 10, ""subsample"": 0.7}",0.6126632291827758,3,complete,True
+8,"{""colsample_bytree"": 0.8, ""learning_rate"": 0.1, ""min_child_samples"": 20, ""n_estimators"": 200, ""num_leaves"": 15, ""reg_lambda"": 1, ""subsample"": 0.7}",0.6437152139826067,3,complete,True
+9,"{""colsample_bytree"": 0.6, ""learning_rate"": 0.1, ""min_child_samples"": 50, ""n_estimators"": 200, ""num_leaves"": 63, ""reg_lambda"": 10, ""subsample"": 1.0}",0.6284578345151729,3,complete,True
+10,"{""colsample_bytree"": 1.0, ""learning_rate"": 0.02, ""min_child_samples"": 100, ""n_estimators"": 800, ""num_leaves"": 31, ""reg_lambda"": 10, ""subsample"": 0.7}",0.6376465435446712,3,complete,True
+11,"{""colsample_bytree"": 1.0, ""learning_rate"": 0.05, ""min_child_samples"": 50, ""n_estimators"": 400, ""num_leaves"": 15, ""reg_lambda"": 10, ""subsample"": 1.0}",0.6417713356062591,3,complete,True
+12,"{""colsample_bytree"": 0.6, ""learning_rate"": 0.02, ""min_child_samples"": 100, ""n_estimators"": 200, ""num_leaves"": 31, ""reg_lambda"": 10, ""subsample"": 1.0}",0.6562122234894899,3,complete,True
+13,"{""colsample_bytree"": 0.8, ""learning_rate"": 0.2, ""min_child_samples"": 50, ""n_estimators"": 800, ""num_leaves"": 63, ""reg_lambda"": 0, ""subsample"": 0.7}",0.589616104145077,3,complete,True
+14,"{""colsample_bytree"": 1.0, ""learning_rate"": 0.1, ""min_child_samples"": 100, ""n_estimators"": 800, ""num_leaves"": 15, ""reg_lambda"": 1, ""subsample"": 1.0}",0.6180783216803309,3,complete,True
+15,"{""colsample_bytree"": 0.6, ""learning_rate"": 0.05, ""min_child_samples"": 100, ""n_estimators"": 200, ""num_leaves"": 31, ""reg_lambda"": 0, ""subsample"": 1.0}",0.6449932932608166,3,complete,True
+16,"{""colsample_bytree"": 1.0, ""learning_rate"": 0.05, ""min_child_samples"": 20, ""n_estimators"": 800, ""num_leaves"": 7, ""reg_lambda"": 0, ""subsample"": 1.0}",0.6401375622882614,3,complete,True
+17,"{""colsample_bytree"": 1.0, ""learning_rate"": 0.2, ""min_child_samples"": 50, ""n_estimators"": 800, ""num_leaves"": 63, ""reg_lambda"": 0, ""subsample"": 1.0}",0.5958760908904907,3,complete,True
+18,"{""colsample_bytree"": 0.8, ""learning_rate"": 0.1, ""min_child_samples"": 50, ""n_estimators"": 800, ""num_leaves"": 7, ""reg_lambda"": 1, ""subsample"": 0.7}",0.6337506073912593,3,complete,True
+19,"{""colsample_bytree"": 1.0, ""learning_rate"": 0.2, ""min_child_samples"": 100, ""n_estimators"": 200, ""num_leaves"": 15, ""reg_lambda"": 0, ""subsample"": 1.0}",0.6240658952431695,3,complete,True
+20,"{""colsample_bytree"": 0.6, ""learning_rate"": 0.1, ""min_child_samples"": 100, ""n_estimators"": 800, ""num_leaves"": 7, ""reg_lambda"": 1, ""subsample"": 0.7}",0.6315477507575665,3,complete,True

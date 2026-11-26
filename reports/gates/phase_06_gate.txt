@@ -1,0 +1,17 @@
+Predictions are computational hypotheses, not experimental findings.
+PASS: Tier-1 model metadata and ignored model binary exist | model=True; metadata tier=tier1
+PASS: model binary SHA-256 matches tracked metadata | 901ba951209ca7ec34b35774ea8d43a3d0a6c775cf724690e72e5bf09da5b57a
+PASS: model metadata uses the configured ESM-2 35M model | facebook/esm2_t12_35M_UR50D / esm2_t12_35M
+PASS: saved feature list is exactly Tier-1 and excludes ClinVar data | features=12
+PASS: Tier-2 model was not created without sufficient complete Tier-2 inputs | tier2_model_exists=False
+PASS: at least 10 non-case-study training proteins and rows recorded | proteins=52; rows=45411
+PASS: OOF predictions cover every training mutation exactly once | oof_rows=45411; training_rows=45411
+PASS: OOF labels are the corresponding training labels only | oof rows=45411
+PASS: no fit fold overlaps its validation or any held-out test cluster | fit rows audited=15; fit-test overlap max=0
+PASS: stability metrics include n_proteins and n_rows for all ablations/baselines | metrics rows=7
+PASS: all four oriented baselines avoid an all-fold sign contradiction | baseline mean Spearman={'abs_d_hydropathy': 0.08818989731877389, 'abs_d_volume': 0.07411447178875222, 'negative_blosum62': 0.11837489478785632, 'negative_esm_llr': 0.1847169049575139}
+PASS: 20 grouped-CV hyperparameter configurations completed under 10 minutes | completed=20; runtime=50.098926s
+PASS: per-protein Spearman table reports qualifying proteins | models=7; qualifying=52..52
+PASS: metadata records true maximum training protein length and no test evaluation | max_length=72; held_out_test_used=False
+PASS: summary records complete finite OOF coverage and no model tier mixing | oof=45411; missing=0
+PASS: pytest -q passes | 83 passed in 9.53s

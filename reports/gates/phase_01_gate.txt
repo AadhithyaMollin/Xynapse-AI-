@@ -1,0 +1,5 @@
+Predictions are computational hypotheses, not experimental findings.
+Phase 1 gate run: 2026-11-26T10:29:00.358324+00:00
+PASS: pytest — ...............................................                          [100%] | 47 passed in 9.94s
+PASS: contract table validator — [PASS] mut_esm.parquet | [PASS] mut_features.parquet | [PASS] pos_evolution.parquet | [PASS] pos_function.parquet | [SKIP] pos_structure .parquet: not in the data contract (extra file, fine) | [PASS] pos_structure.parquet | [PASS] proteins.parquet
+PASS: pre_push_check — PASS: allowlist and forbidden locations/extensions — 54 staged path(s) checked | PASS: README managed-block rule — only managed block changed | PASS: file-size caps — staged files are within caps | PASS: secret scan — no secret patterns found

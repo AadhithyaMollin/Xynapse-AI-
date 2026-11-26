@@ -1,0 +1,4 @@
+PASS: allowlist and forbidden locations/extensions — 54 staged path(s) checked
+PASS: README managed-block rule — only managed block changed
+PASS: file-size caps — staged files are within caps
+PASS: secret scan — no secret patterns found

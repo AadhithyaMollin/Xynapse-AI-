@@ -1,0 +1,17 @@
+{
+  "thresholds": {
+    "ddg_damaging": 0.676349007871,
+    "ddg_stabilizing": 0.0210001491369,
+    "p_impact_high": 0.58747815343,
+    "p_impact_low": null
+  },
+  "stability_oof_rows": 45411,
+  "stability_damaging_positive_rows": 9354,
+  "stability_stabilizing_positive_rows": 440,
+  "function_oof_rows": 71962,
+  "function_label_prevalence": 0.4314777243545204,
+  "calibration": "isotonic",
+  "model_files_frozen": 5,
+  "runtime_seconds": 0.098527,
+  "frozen_at_utc": "2026-11-26T12:27:27.501075+00:00"
+}

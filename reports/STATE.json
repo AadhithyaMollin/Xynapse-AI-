@@ -1,0 +1,20 @@
+{
+  "current_phase": 13,
+  "phases": {
+    "00": {"status": "DONE", "branch": null, "commit_sha": null, "pr_url": null},
+    "01": {"status": "DONE", "branch": "ml/phase-01-baseline", "commit_sha": "61b81f282b2e518d5ce93c76aa30fd93d6bce8dd", "pr_url": "https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-01-baseline?expand=1"},
+    "02": {"status": "DONE", "branch": "ml/phase-02-datasets", "commit_sha": "c28cc4e65f9b42bec77abd52c8a13ff1995e8066", "pr_url": "https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-02-datasets?expand=1"},
+    "03": {"status": "DONE", "branch": "ml/phase-03-labels", "commit_sha": "e361ac52259f789021f41d00f3ce996ab9786ad3", "pr_url": "https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-03-labels?expand=1"},
+    "04": {"status": "DONE", "branch": "ml/phase-04-features", "commit_sha": "211718a2456f2d68a98ae4a5210c4614439acf32", "pr_url": "https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-04-features?expand=1"},
+    "05": {"status": "DONE", "branch": "ml/phase-05-splits", "commit_sha": "2ad95cc954580a8b8ab0accb819be7ba10597bdd", "pr_url": "https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-05-splits?expand=1"},
+    "06": {"status": "DONE", "branch": "ml/phase-06-stability", "commit_sha": "5c553bb5eecfba4f96e1027b17d63e670be7488a", "pr_url": "https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-06-stability?expand=1"},
+    "07": {"status": "DONE", "branch": "ml/phase-07-function", "commit_sha": "3c3d85715976e544aff35e799732eeb1944bafdb", "pr_url": "https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-07-function?expand=1"},
+    "08": {"status": "DONE", "branch": "ml/phase-08-freeze-test", "commit_sha": "ef20f6ee4d7721f2b9ab4bd5cb9a78ca3354493a", "pr_url": "https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-08-freeze-test?expand=1"},
+    "09": {"status": "DONE", "branch": "ml/phase-09-ranking", "commit_sha": "69046043adb6f885ae78bc9d20519056927ea2fb", "pr_url": "https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-09-ranking?expand=1"},
+    "10": {"status": "DONE", "branch": "ml/phase-10-pipeline", "commit_sha": "792ebbe6638ee401dca8533597a34f51419b8fba", "pr_url": "https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-10-pipeline?expand=1"},
+    "11": {"status": "DONE", "branch": "ml/phase-11-dashboard", "commit_sha": "666a47ca71852f9c729c474aaa2ae07309aad65b", "pr_url": "https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-11-dashboard?expand=1"},
+    "12": {"status": "DONE", "branch": "ml/phase-12-docs", "commit_sha": "fc79ca5aabd403f459625e9229456b790b492b25", "pr_url": "https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-12-docs?expand=1"},
+    "13": {"status": "DONE", "branch": "ml/phase-13-release", "commit_sha": "ddb62390d50e2ebd79ccc4845ea9345ae1070f60", "pr_url": "https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-13-release?expand=1"}
+  },
+  "checkpoint": "CP1 and CP2 checkpoints waived by explicit owner instruction"
+}

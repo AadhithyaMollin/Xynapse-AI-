@@ -1,0 +1,12 @@
+gene,label,review_stars,count
+PTEN,0,1,4
+PTEN,0,3,6
+PTEN,1,1,70
+PTEN,1,2,99
+PTEN,1,3,88
+TP53,0,1,79
+TP53,0,2,2
+TP53,0,3,73
+TP53,1,1,21
+TP53,1,2,140
+TP53,1,3,64

@@ -1,0 +1,11 @@
+{
+  "expected_orientation": "higher baseline score means more destabilizing",
+  "baseline_mean_spearman": {
+    "abs_d_hydropathy": 0.08818989731877389,
+    "abs_d_volume": 0.07411447178875222,
+    "negative_blosum62": 0.11837489478785632,
+    "negative_esm_llr": 0.1847169049575139
+  },
+  "all_folds_negative_baselines": [],
+  "training_only": true
+}

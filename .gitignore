@@ -1,0 +1,28 @@
+data/raw/*
+data/interim/*
+data/external/*
+data/processed/*
+models/*
+logs/*
+!**/.gitkeep
+__pycache__/
+.ipynb_checkpoints/
+.env
+*.pdb.gz
+.pytest_cache/
+.venv/
+.DS_Store
+
+# Publish model metadata only; keep model artifacts ignored.
+models/*
+!models/.gitkeep
+!models/*/
+models/*/*
+!models/*/*.json
+
+# Demo artifacts are intentionally publishable (pre_push_check enforces size limits).
+!demo_data/
+!demo_data/**
+
+# Report Parquet files are derived outputs and remain local.
+reports/tables/*.parquet

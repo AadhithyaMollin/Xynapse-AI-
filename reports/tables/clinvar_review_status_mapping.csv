@@ -1,0 +1,11 @@
+review_status,review_stars,included_by_minimum_star_filter
+-,0,False
+"criteria provided, conflicting classifications",-1,False
+"criteria provided, multiple submitters, no conflicts",2,True
+"criteria provided, single submitter",1,True
+no assertion criteria provided,0,False
+no classification for the single variant,0,False
+no classification provided,0,False
+no classifications from unflagged records,0,False
+practice guideline,4,True
+reviewed by expert panel,3,True

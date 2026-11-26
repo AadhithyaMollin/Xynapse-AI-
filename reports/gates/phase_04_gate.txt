@@ -1,0 +1,11 @@
+Predictions are computational hypotheses, not experimental findings.
+PASS: Tier-1 table validates against the contract | validator PASS
+PASS: every protein has exactly 19 x L mutation rows | rows=216258; expected=216258; proteins=92
+PASS: Tier-1 columns have no missing or non-finite values | columns=10
+PASS: features metadata uses one configured ESM-2 35M model | full=facebook/esm2_t12_35M_UR50D; short=esm2_t12_35M
+PASS: per-protein runtime log and availability manifest cover every protein | runtime rows=92; manifest rows=92
+PASS: BIO-1/BIO-2 request includes required Tier-2 and msa_logodds fields | request=reports/teammate_request.md
+PASS: full function-label ESM direction check has negative mean Spearman | assays=30; mean=-0.284869493
+PASS: summary agrees with output row/model metadata and measured runtime | runtime=195.40s; caches reused=7
+PASS: per-protein ESM caches contain one ESM model name | cache files=100; models=['facebook/esm2_t12_35M_UR50D']
+PASS: pytest -q passes | 69 passed in 9.16s

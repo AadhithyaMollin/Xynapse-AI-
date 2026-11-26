@@ -1,0 +1,3 @@
+gene,protein_id,n_parsed_candidates,n_wt_mismatches,wt_mismatch_rate,sequence_length
+TP53,P04637,1449,0,0.0,393
+PTEN,P60484,1210,0,0.0,403
