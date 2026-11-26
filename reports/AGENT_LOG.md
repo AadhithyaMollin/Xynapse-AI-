@@ -356,4 +356,18 @@ Predictions are computational hypotheses, not experimental findings.
 - Measured task split counts from `reports/tables/split_summary.csv`: ddG train 52 proteins/45,411 rows and test 8 proteins/7,390 rows; function train 26 proteins/71,962 rows and test 4 proteins/4,815 rows. Five grouped validation folds were generated within training clusters.
 - Validation: Phase 5 gate 16/16 checks PASS; pytest 76 passed in 8.93 s. Both label tables validate and retain unique mutation keys; no cluster crosses train/test or validation folds; held-out case-study/ClinVar IDs are not in training.
 - Deviation: MMseqs was absent from PATH despite the prior environment snapshot; installed the project-declared `mmseqs2` Homebrew package. No label/test metrics were calculated and no held-out test set was evaluated.
-- Git: Phase 5 changes not yet published; publication will be from `ml/phase-05-splits`, based on the Phase 4 branch. Open caveat: Phase 2 ProteinGym assay direction signs were mixed and function labels remain provisional.
+- Git: branch `ml/phase-05-splits`, commit `2ad95cc954580a8b8ab0accb819be7ba10597bdd`; remote `ls-remote` SHA matched. Compare URL: https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-05-splits?expand=1.
+- Open caveat: Phase 2 ProteinGym assay direction signs were mixed and function labels remain provisional.
+
+## Phase 06 — stability model
+
+**Phase 06 STARTED.** Training is restricted to the Phase 5 train split and its five cluster-grouped CV folds. The held-out split is not used for fitting, tuning, thresholds, or reporting.
+
+**Phase 06 DONE — PHASE REPORT.**
+- Files: `src/xynapse/metrics.py`, `scripts/train_stability.py`, `scripts/gates/gate_phase_06.py`, `tests/test_metrics.py`, `tests/test_stability_training.py`; reports in `reports/tables/` and `reports/gates/`; tracked metadata `models/esm2_t12_35M/stability_tier1.json`. The model binary and OOF Parquet remain ignored/local.
+- Training input: 52 proteins, 40 clusters, 45,411 rows; 8 held-out test clusters excluded. Tier-1 only; Tier-2 model absent because only two teammate-table proteins are available. Max stability training protein length: 72 aa. Source: `reports/tables/phase_06_stability_summary.json`, model metadata.
+- Grouped OOF covered each training row once (45,411/45,411), with no fit/validation or fit/test cluster overlap. Twenty random configurations completed in 50.098926 s (inside the 10-minute cap); the cached rerun took 0.001184 s for search lookup and 5.986520 s for full output regeneration.
+- OOF summary for `tier1_full` (training only): Spearman 0.480236099, Pearson 0.545773782, RMSE 0.823109547 kcal/mol. ESM-only: Spearman 0.475046?; the saved exact values are in `reports/tables/stability_oof_metrics.csv`. Per-protein Spearman qualified all 52 training proteins (minimum 30 variants). Baselines all had positive mean fold Spearman; details in `reports/tables/stability_baseline_cv.csv` and `stability_baseline_sign_check.json`.
+- Validation: Phase 6 gate 16/16 checks PASS; pytest 83 passed in 9.53 s. No held-out test scores were computed.
+- Git publication is pending the Phase 6 push procedure; no test evaluation.
+- Correction to the rounded ESM-only OOF value above: exact saved `stability_oof_metrics.csv` Spearman is 0.4750470126350050 (the earlier `0.475046?` text was an incomplete draft value).

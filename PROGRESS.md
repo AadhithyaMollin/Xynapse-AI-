@@ -64,4 +64,11 @@
 - DONE locally. Installed the project-declared Homebrew `mmseqs2` package after discovering the executable was absent from PATH. MMseqs2 `20-ae60e` clustered 92 proteins into 79 clusters (identity 0.30, coverage 0.80); 14 clusters are test-only, including all case-study/ClinVar clusters. Command and hashes: `reports/tables/phase_05_split_summary.json`; details: `docs/data_cards/splits.md`.
 - ddG: train 52 proteins / 45,411 rows; test 8 / 7,390. Function: train 26 / 71,962; test 4 / 4,815. Five training-cluster CV folds; no test evaluation. Source: `reports/tables/split_summary.csv`.
 - Gate 16/16 PASS; pytest 76 passed in 8.93 s. Source: `reports/gates/phase_05_gate.txt`.
-- Phase 5 code/data-card publication is in progress on the branch from Phase 4.
+- Phase 5 pushed on `ml/phase-05-splits`, commit `2ad95cc954580a8b8ab0accb819be7ba10597bdd`; compare URL: https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-05-splits?expand=1.
+
+### Phase 6 — stability model
+- DONE locally. Trained `esm2_t12_35M` Tier-1 LightGBM on 52 ddG proteins / 45,411 rows from 40 training clusters; 8 test clusters excluded. No Tier-2 model (only 2 teammate-table proteins). Max stability training length 72 aa. Source: `reports/tables/phase_06_stability_summary.json` and `models/esm2_t12_35M/stability_tier1.json`.
+- 20 grouped-CV hyperparameter configs completed in 50.098926 s; bounded below 10 min. OOF covers every training row once. `tier1_full` train-only OOF: Spearman 0.480236099, Pearson 0.545773782, RMSE 0.823109547 kcal/mol. See `reports/tables/stability_oof_metrics.csv`; no test scores calculated.
+- All four oriented baselines have positive mean fold Spearman. Per-protein Spearman qualified all 52 proteins at the 30-variant minimum. Source: `reports/tables/stability_baseline_sign_check.json`, `reports/tables/stability_per_protein_oof.csv`.
+- Gate 16/16 PASS; pytest 83 passed in 9.53 s. Source: `reports/gates/phase_06_gate.txt`.
+- Git publication is pending on `ml/phase-06-stability`.

@@ -1,0 +1,21 @@
+config_id,params,mean_grouped_cv_spearman,completed_inner_folds,status,cache_reused
+1,"{""colsample_bytree"": 0.6, ""learning_rate"": 0.02, ""min_child_samples"": 50, ""n_estimators"": 800, ""num_leaves"": 7, ""reg_lambda"": 0, ""subsample"": 0.7}",0.4817382079859398,3,complete,True
+2,"{""colsample_bytree"": 1.0, ""learning_rate"": 0.05, ""min_child_samples"": 100, ""n_estimators"": 800, ""num_leaves"": 15, ""reg_lambda"": 0, ""subsample"": 0.7}",0.45373714133101434,3,complete,True
+3,"{""colsample_bytree"": 0.6, ""learning_rate"": 0.05, ""min_child_samples"": 100, ""n_estimators"": 400, ""num_leaves"": 63, ""reg_lambda"": 0, ""subsample"": 1.0}",0.446241720748165,3,complete,True
+4,"{""colsample_bytree"": 0.8, ""learning_rate"": 0.1, ""min_child_samples"": 20, ""n_estimators"": 400, ""num_leaves"": 63, ""reg_lambda"": 0, ""subsample"": 0.7}",0.43942408528707766,3,complete,True
+5,"{""colsample_bytree"": 1.0, ""learning_rate"": 0.2, ""min_child_samples"": 50, ""n_estimators"": 200, ""num_leaves"": 7, ""reg_lambda"": 1, ""subsample"": 1.0}",0.46088369972681925,3,complete,True
+6,"{""colsample_bytree"": 0.6, ""learning_rate"": 0.2, ""min_child_samples"": 20, ""n_estimators"": 800, ""num_leaves"": 7, ""reg_lambda"": 10, ""subsample"": 1.0}",0.44136259990536614,3,complete,True
+7,"{""colsample_bytree"": 0.6, ""learning_rate"": 0.1, ""min_child_samples"": 20, ""n_estimators"": 800, ""num_leaves"": 31, ""reg_lambda"": 10, ""subsample"": 0.7}",0.4371009059188899,3,complete,True
+8,"{""colsample_bytree"": 0.8, ""learning_rate"": 0.1, ""min_child_samples"": 20, ""n_estimators"": 200, ""num_leaves"": 15, ""reg_lambda"": 1, ""subsample"": 0.7}",0.4670992039665129,3,complete,True
+9,"{""colsample_bytree"": 0.6, ""learning_rate"": 0.1, ""min_child_samples"": 50, ""n_estimators"": 200, ""num_leaves"": 63, ""reg_lambda"": 10, ""subsample"": 1.0}",0.44809162462363467,3,complete,True
+10,"{""colsample_bytree"": 1.0, ""learning_rate"": 0.02, ""min_child_samples"": 100, ""n_estimators"": 800, ""num_leaves"": 31, ""reg_lambda"": 10, ""subsample"": 0.7}",0.4629747435606483,3,complete,True
+11,"{""colsample_bytree"": 1.0, ""learning_rate"": 0.05, ""min_child_samples"": 50, ""n_estimators"": 400, ""num_leaves"": 15, ""reg_lambda"": 10, ""subsample"": 1.0}",0.4703665250302649,3,complete,True
+12,"{""colsample_bytree"": 0.6, ""learning_rate"": 0.02, ""min_child_samples"": 100, ""n_estimators"": 200, ""num_leaves"": 31, ""reg_lambda"": 10, ""subsample"": 1.0}",0.4881424440196203,3,complete,True
+13,"{""colsample_bytree"": 0.8, ""learning_rate"": 0.2, ""min_child_samples"": 50, ""n_estimators"": 800, ""num_leaves"": 63, ""reg_lambda"": 0, ""subsample"": 0.7}",0.4068867419667277,3,complete,True
+14,"{""colsample_bytree"": 1.0, ""learning_rate"": 0.1, ""min_child_samples"": 100, ""n_estimators"": 800, ""num_leaves"": 15, ""reg_lambda"": 1, ""subsample"": 1.0}",0.4380730040614929,3,complete,True
+15,"{""colsample_bytree"": 0.6, ""learning_rate"": 0.05, ""min_child_samples"": 100, ""n_estimators"": 200, ""num_leaves"": 31, ""reg_lambda"": 0, ""subsample"": 1.0}",0.47339603626230825,3,complete,True
+16,"{""colsample_bytree"": 1.0, ""learning_rate"": 0.05, ""min_child_samples"": 20, ""n_estimators"": 800, ""num_leaves"": 7, ""reg_lambda"": 0, ""subsample"": 1.0}",0.46474161069959585,3,complete,True
+17,"{""colsample_bytree"": 1.0, ""learning_rate"": 0.2, ""min_child_samples"": 50, ""n_estimators"": 800, ""num_leaves"": 63, ""reg_lambda"": 0, ""subsample"": 1.0}",0.41033156775658836,3,complete,True
+18,"{""colsample_bytree"": 0.8, ""learning_rate"": 0.1, ""min_child_samples"": 50, ""n_estimators"": 800, ""num_leaves"": 7, ""reg_lambda"": 1, ""subsample"": 0.7}",0.4538796656320265,3,complete,True
+19,"{""colsample_bytree"": 1.0, ""learning_rate"": 0.2, ""min_child_samples"": 100, ""n_estimators"": 200, ""num_leaves"": 15, ""reg_lambda"": 0, ""subsample"": 1.0}",0.4410504549320846,3,complete,True
+20,"{""colsample_bytree"": 0.6, ""learning_rate"": 0.1, ""min_child_samples"": 100, ""n_estimators"": 800, ""num_leaves"": 7, ""reg_lambda"": 1, ""subsample"": 0.7}",0.45355924863527136,3,complete,True

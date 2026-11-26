@@ -1,0 +1,16 @@
+model,cv_fold,n_fit_rows,n_validation_rows,n_fit_clusters,n_validation_clusters,fit_validation_cluster_overlap,fit_test_cluster_overlap
+esm_only,0,34900,10511,31,9,0,0
+esm_only,1,31269,14142,30,10,0,0
+esm_only,2,36983,8428,31,9,0,0
+esm_only,3,38580,6831,33,7,0,0
+esm_only,4,39912,5499,35,5,0,0
+esm_plus_physchem,0,34900,10511,31,9,0,0
+esm_plus_physchem,1,31269,14142,30,10,0,0
+esm_plus_physchem,2,36983,8428,31,9,0,0
+esm_plus_physchem,3,38580,6831,33,7,0,0
+esm_plus_physchem,4,39912,5499,35,5,0,0
+tier1_full,0,34900,10511,31,9,0,0
+tier1_full,1,31269,14142,30,10,0,0
+tier1_full,2,36983,8428,31,9,0,0
+tier1_full,3,38580,6831,33,7,0,0
+tier1_full,4,39912,5499,35,5,0,0

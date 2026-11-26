@@ -1,0 +1,18 @@
+{
+  "n_training_proteins": 52,
+  "n_training_rows": 45411,
+  "n_training_clusters": 40,
+  "n_test_clusters_excluded": 8,
+  "n_oof_rows": 45411,
+  "n_oof_missing": 0,
+  "n_search_configs_completed": 20,
+  "search_runtime_seconds": 50.098926,
+  "search_runtime_this_run_seconds": 0.001184,
+  "search_configs_reused": 20,
+  "build_runtime_seconds": 5.98652,
+  "max_training_protein_length": 72,
+  "esm_model": "facebook/esm2_t12_35M_UR50D",
+  "esm_model_short": "esm2_t12_35M",
+  "tier2_model_exists": false,
+  "held_out_test_used": false
+}
