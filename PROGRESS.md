@@ -4,7 +4,7 @@
 - ddg sign convention: positive = destabilizing (kcal/mol)
 - Data contract: Parquet tables keyed by protein_id + position (+ wt, mut); see src/xynapse/schema.py
 - Position tables must include `wt` (agreed with BIO-1 / BIO-2)
-- ESM-2 dev model: esm2_t12_35M ; final model: esm2_t33_650M (verify memory)
+- ESM-2 model for all phases: `facebook/esm2_t12_35M_UR50D` (short name `esm2_t12_35M`); do not use the 650M model.
 
 ## Data cards (source URL, version/date downloaded, license, columns used, filters, n rows)
 
@@ -56,4 +56,12 @@
 - Gate PASS; 66 tests passed in 11.67 s; build runtime 8.58 s. Source: `reports/gates/phase_03_gate.txt` and build summary. Branch `ml/phase-03-labels` pushed; commit SHA and compare URL are recorded in `reports/gates/phase_03_push_verification.txt`.
 
 ### Phase 4 — Tier-1 features
-- STARTED. Uses the configured ESM-2 35M development model only; per-protein score caches make reruns resumable. Teammate data remain read-only.
+- DONE and pushed on `ml/phase-04-features`, commit `211718a2456f2d68a98ae4a5210c4614439acf32`; compare URL: https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-04-features?expand=1.
+- Built Tier-1 features for 92 proteins: 216,258 rows, 10 Tier-1 columns, no missing values; model `facebook/esm2_t12_35M_UR50D`, MPS runtime 195.40 s, 7 caches reused. Full function-label direction check covered 30 assays; mean Spearman was -0.284869493. The earlier mixed assay-level direction precheck remains a caveat.
+- Phase 4 gate: all 11 checks PASS; 69 tests passed locally and in the shared clone. Source: `reports/gates/phase_04_gate.txt`, `reports/tables/phase_04_feature_summary.json`.
+
+### Phase 5 — clustering and splits
+- DONE locally. Installed the project-declared Homebrew `mmseqs2` package after discovering the executable was absent from PATH. MMseqs2 `20-ae60e` clustered 92 proteins into 79 clusters (identity 0.30, coverage 0.80); 14 clusters are test-only, including all case-study/ClinVar clusters. Command and hashes: `reports/tables/phase_05_split_summary.json`; details: `docs/data_cards/splits.md`.
+- ddG: train 52 proteins / 45,411 rows; test 8 / 7,390. Function: train 26 / 71,962; test 4 / 4,815. Five training-cluster CV folds; no test evaluation. Source: `reports/tables/split_summary.csv`.
+- Gate 16/16 PASS; pytest 76 passed in 8.93 s. Source: `reports/gates/phase_05_gate.txt`.
+- Phase 5 code/data-card publication is in progress on the branch from Phase 4.

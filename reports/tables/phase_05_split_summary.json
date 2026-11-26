@@ -1,0 +1,33 @@
+{
+  "version": "20-ae60e",
+  "command": [
+    "/opt/homebrew/bin/mmseqs",
+    "easy-cluster",
+    "/Users/parthsrivastava/Developer/xynapse-ai/data/interim/train_proteins.fasta",
+    "/Users/parthsrivastava/Developer/xynapse-ai/data/interim/mmseqs_train_proteins",
+    "/Users/parthsrivastava/Developer/xynapse-ai/data/interim/mmseqs_tmp",
+    "--min-seq-id",
+    "0.3",
+    "-c",
+    "0.8",
+    "--cov-mode",
+    "0"
+  ],
+  "command_display": "/opt/homebrew/bin/mmseqs easy-cluster /Users/parthsrivastava/Developer/xynapse-ai/data/interim/train_proteins.fasta /Users/parthsrivastava/Developer/xynapse-ai/data/interim/mmseqs_train_proteins /Users/parthsrivastava/Developer/xynapse-ai/data/interim/mmseqs_tmp --min-seq-id 0.3 -c 0.8 --cov-mode 0",
+  "identity": 0.3,
+  "coverage": 0.8,
+  "cov_mode": 0,
+  "input_fasta": "data/interim/train_proteins.fasta",
+  "input_fasta_sha256": "6e367e57d0ea9f9fef286974bc3e1061d3ce36b18b6ab270ca4dad6b4e446b41",
+  "cluster_tsv": "data/interim/mmseqs_train_proteins_cluster.tsv",
+  "cluster_tsv_sha256": "0db3f187d226b66d5f6aa8ff6f63ef2c7a66b6309a440aaaa766d026a76c80de",
+  "retrieval_date": "2026-11-26",
+  "n_proteins": 92,
+  "n_clusters": 79,
+  "n_case_external_test_ids": 2,
+  "n_test_clusters": 14,
+  "mmseqs_runtime_seconds": 2.338534,
+  "mmseqs_result_reused": false,
+  "build_runtime_seconds": 2.64035,
+  "created_utc": "2026-11-26T11:39:28.123286+00:00"
+}

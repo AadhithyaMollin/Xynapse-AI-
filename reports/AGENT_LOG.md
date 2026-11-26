@@ -337,3 +337,23 @@ Predictions are computational hypotheses, not experimental findings.
 ## Phase 4 — Tier-1 features
 
 **Phase 04 STARTED.** The build will use `facebook/esm2_t12_35M_UR50D` only, with resumable per-protein caches and a single preloaded model instance. Teammate position tables remain read-only; this phase only audits their availability and emits a BIO request.
+
+**Phase 04 DONE — PHASE REPORT.**
+- Files: `scripts/build_features_tier1.py`, `scripts/gates/gate_phase_04.py`, `src/xynapse/esm_scoring.py`, `src/xynapse/features.py`, `tests/test_features.py`; report artifacts under `reports/tables/`, `reports/gates/`, plus `reports/teammate_request.md` and progress/state updates.
+- Validation: 69 tests passed (9.25 s on the shared-clone tree). Gate: 11/11 checks PASS. Pre-push check: all four rules PASS.
+- Measured output: 216,258 rows for 92 proteins, 10 Tier-1 columns with zero missing values; ESM model `facebook/esm2_t12_35M_UR50D`; device MPS; runtime 195.40 s; 7 cached proteins reused. Full direction check: 30 assays, mean Spearman(project label, ESM LLR) = -0.284869493. Sources: `reports/tables/phase_04_feature_summary.json`, `reports/tables/label_direction_check.csv`, `reports/gates/phase_04_gate.txt`.
+- Caveat: Phase 2's ProteinGym direction precheck had mixed assay signs. The authorized pooled-mean label orientation remains provisional; the Phase 4 mean check is negative but does not resolve assay-level heterogeneity.
+- Git: branch `ml/phase-04-features`; code commit `211718a2456f2d68a98ae4a5210c4614439acf32`; remote `ls-remote` SHA matched. PR/compare: https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-04-features?expand=1.
+- Open issues: Tier-2 modeling depends on adequate sequence-matched teammate tables; no model has been trained and no test set has been evaluated.
+
+## Phase 05 — clustering and splits
+
+**Phase 05 STARTED.** Required MMseqs2 was not available on this shell's PATH, so I installed the existing project-declared Homebrew package `mmseqs2` and verified version `20-ae60e`.
+
+**Phase 05 DONE — PHASE REPORT.**
+- Files: `src/xynapse/splits.py`, `scripts/build_splits.py`, `scripts/gates/gate_phase_05.py`, `tests/test_splits.py`, `docs/data_cards/splits.md`; local outputs include the FASTA, MMseqs TSV, split assignment, updated labels, and training Parquets under ignored `data/`, plus split summaries and gate reports.
+- MMseqs command and measured identifiers are recorded in `reports/tables/phase_05_split_summary.json`: version `20-ae60e`; identity 0.30; coverage 0.80; covariance mode 0; input 92 proteins; 79 clusters; 14 test clusters; command runtime 2.338534 s; full build runtime 2.640350 s. Input FASTA SHA-256 `6e367e57d0ea9f9fef286974bc3e1061d3ce36b18b6ab270ca4dad6b4e446b41`; TSV SHA-256 `0db3f187d226b66d5f6aa8ff6f63ef2c7a66b6309a440aaaa766d026a76c80de`.
+- Measured task split counts from `reports/tables/split_summary.csv`: ddG train 52 proteins/45,411 rows and test 8 proteins/7,390 rows; function train 26 proteins/71,962 rows and test 4 proteins/4,815 rows. Five grouped validation folds were generated within training clusters.
+- Validation: Phase 5 gate 16/16 checks PASS; pytest 76 passed in 8.93 s. Both label tables validate and retain unique mutation keys; no cluster crosses train/test or validation folds; held-out case-study/ClinVar IDs are not in training.
+- Deviation: MMseqs was absent from PATH despite the prior environment snapshot; installed the project-declared `mmseqs2` Homebrew package. No label/test metrics were calculated and no held-out test set was evaluated.
+- Git: Phase 5 changes not yet published; publication will be from `ml/phase-05-splits`, based on the Phase 4 branch. Open caveat: Phase 2 ProteinGym assay direction signs were mixed and function labels remain provisional.

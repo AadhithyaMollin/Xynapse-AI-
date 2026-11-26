@@ -1,0 +1,15 @@
+task,split_id,cv_fold,n_clusters,n_proteins,n_rows
+ddg,test,all,8,8,7390
+ddg,train,all,40,52,45411
+ddg,train_cv_validation,0,9,12,10511
+ddg,train_cv_validation,1,10,18,14142
+ddg,train_cv_validation,2,9,9,8428
+ddg,train_cv_validation,3,7,8,6831
+ddg,train_cv_validation,4,5,5,5499
+function,test,all,4,4,4815
+function,train,all,25,26,71962
+function,train_cv_validation,0,4,4,9806
+function,train_cv_validation,1,3,3,10092
+function,train_cv_validation,2,4,4,14491
+function,train_cv_validation,3,6,7,20934
+function,train_cv_validation,4,8,8,16639

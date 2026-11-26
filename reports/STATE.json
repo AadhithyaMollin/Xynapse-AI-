@@ -1,13 +1,13 @@
 {
-  "current_phase": 4,
+  "current_phase": 5,
   "phases": {
     "00": {"status": "DONE", "branch": null, "commit_sha": null, "pr_url": null},
     "01": {"status": "DONE", "branch": "ml/phase-01-baseline", "commit_sha": "61b81f282b2e518d5ce93c76aa30fd93d6bce8dd", "pr_url": "https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-01-baseline?expand=1"},
     "02": {"status": "DONE", "branch": "ml/phase-02-datasets", "commit_sha": "c28cc4e65f9b42bec77abd52c8a13ff1995e8066", "pr_url": "https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-02-datasets?expand=1"},
     "03": {"status": "DONE", "branch": "ml/phase-03-labels", "commit_sha": "e361ac52259f789021f41d00f3ce996ab9786ad3", "pr_url": "https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-03-labels?expand=1"},
-    "04": {"status": "IN_PROGRESS", "branch": "ml/phase-04-features", "commit_sha": null, "pr_url": null},
-    "05": {"status": "NOT_STARTED", "branch": "ml/phase-05-splits", "commit_sha": null, "pr_url": null},
-    "06": {"status": "NOT_STARTED", "branch": "ml/phase-06-stability", "commit_sha": null, "pr_url": null},
+    "04": {"status": "DONE", "branch": "ml/phase-04-features", "commit_sha": "211718a2456f2d68a98ae4a5210c4614439acf32", "pr_url": "https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-04-features?expand=1"},
+    "05": {"status": "IN_PROGRESS", "branch": "ml/phase-05-splits", "commit_sha": null, "pr_url": null},
+    "06": {"status": "IN_PROGRESS", "branch": "ml/phase-06-stability", "commit_sha": null, "pr_url": null},
     "07": {"status": "NOT_STARTED", "branch": "ml/phase-07-function", "commit_sha": null, "pr_url": null},
     "08": {"status": "NOT_STARTED", "branch": "ml/phase-08-freeze-test", "commit_sha": null, "pr_url": null},
     "09": {"status": "NOT_STARTED", "branch": "ml/phase-09-ranking", "commit_sha": null, "pr_url": null},
