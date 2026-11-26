@@ -1,6 +1,6 @@
 {
   "branch": "ml/phase-13-release",
-  "branch_remote_sha": "ddb62390d50e2ebd79ccc4845ea9345ae1070f60",
+  "tagged_release_commit_sha": "ddb62390d50e2ebd79ccc4845ea9345ae1070f60",
   "compare_url": "https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-13-release?expand=1",
   "frozen_tag": "models-frozen",
   "frozen_tag_sha": "28e7506a841d953a6bea4891fe3fdd797d733883",
