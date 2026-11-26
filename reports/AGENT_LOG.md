@@ -320,3 +320,16 @@ Predictions are computational hypotheses, not experimental findings.
 - Function conversion uses `1 - source_binary_label` under the explicitly authorized pooled-mean orientation; the audit still records `mixed_assay_signs`. Raw `DMS_score` and within-assay percentile ranks are retained per assay; no cross-assay raw-score pooling is done.
 - Phase 3 test/gate output: 66 passed in 11.67 s; all 14 checks PASS in `reports/gates/phase_03_gate.txt`. Build runtime: 8.58 s, from the saved build summary.
 - Phase 3 changes currently await push; no model has been trained and no test set has been evaluated.
+
+### PHASE REPORT — Phase 3
+
+Predictions are computational hypotheses, not experimental findings.
+
+- Files created: `src/xynapse/labels.py`, `scripts/build_labels.py`, `scripts/gates/gate_phase_03.py`, `tests/test_labels.py`, and saved Phase 3 summary/prevalence/sign/gate reports.
+- Files changed: additive `external_clinvar` schema contract in `src/xynapse/schema.py`, `tests/test_schema.py`, `PROGRESS.md`, `reports/STATE.json`, and this log.
+- Tests: **66 passed** locally in 11.67 s and **66 passed** in the shared clone in 12.22 s. Sources: `reports/gates/phase_03_pytest.txt` and shared-clone result documented in the push record.
+- Gate: **14 PASS** checks in `reports/gates/phase_03_gate.txt`; H2 pre-push checks PASS for 14 staged paths; remote branch SHA matched local code commit.
+- Measured outputs: 92 training/case-study proteins; ddG 52,801 rows over 60 training proteins; function 76,777 rows over 30 training proteins; ClinVar external 646 rows over 2 mapped proteins; 92 reliable ddG observations collapsed; project-sign proline mean +1.389019036 kcal/mol over 2,620 X→P labels; build runtime 8.58 s. Sources: `reports/tables/phase_03_label_build_summary.json`, `reports/tables/label_prevalence.csv`, `reports/tables/sign_check_megascale_labels.csv`.
+- Deviations/open limitations: ClinVar remains limited to the two verified proteins in the teammate table and is exempted from the 10-training-protein threshold because it is external-only. ProteinGym direction remains mixed and provisional. No model fitting or test evaluation occurred.
+- Branch: `ml/phase-03-labels`; phase code commit `e361ac52259f789021f41d00f3ce996ab9786ad3`; remote SHA equality and compare URL are recorded in `reports/gates/phase_03_push_verification.txt`. Compare URL: `https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-03-labels?expand=1`.
+- Status: Phase 3 DONE and pushed. Phase 4 begins next.
