@@ -1,0 +1,27 @@
+model_tier: tier1
+rules:
+  catalytic_site:
+    enabled: true
+    requires: [is_active_site, p_impact]
+    condition: "is_active_site == true and p_impact >= thresholds.p_impact_high"
+  binding_site:
+    enabled: true
+    requires: [is_binding_site|is_metal|is_dna_binding, p_impact]
+    condition: "any available binding annotation is true and p_impact >= thresholds.p_impact_high"
+  folding_stability:
+    enabled: true
+    requires: [ddg_pred]
+    condition: "ddg_pred >= thresholds.ddg_damaging and rsasa <= mechanism.buried_rsasa when rsasa is available"
+  interface:
+    enabled: true
+    requires: [is_interface, p_impact]
+    condition: "is_interface == true and p_impact >= thresholds.p_impact_high"
+  disulfide:
+    enabled: true
+    requires: [is_disulfide]
+    condition: "is_disulfide == true and (p_impact >= thresholds.p_impact_high or ddg_pred >= thresholds.ddg_damaging)"
+  allosteric_hypothesis:
+    enabled: false
+    requires: [dist_to_nearest_site, p_impact]
+    condition: "disabled by default; requires configured minimum distance and no annotated site"
+    minimum_site_distance: null
