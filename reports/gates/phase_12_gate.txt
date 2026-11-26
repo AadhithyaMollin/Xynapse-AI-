@@ -1,0 +1,52 @@
+Predictions are computational hypotheses, not experimental findings.
+PASS: claims audit: README.md managed block has no restricted claims wording | matches=[]
+PASS: claims audit: README.md managed block contains the required disclaimer | disclaimer_present=True
+PASS: claims audit: docs/DEPLOY.md has no restricted claims wording | matches=[]
+PASS: claims audit: docs/DEPLOY.md contains the required disclaimer | disclaimer_present=True
+PASS: claims audit: docs/SHARING_ARTIFACTS.md has no restricted claims wording | matches=[]
+PASS: claims audit: docs/SHARING_ARTIFACTS.md contains the required disclaimer | disclaimer_present=True
+PASS: claims audit: docs/data_cards/alphafold_demo.md has no restricted claims wording | matches=[]
+PASS: claims audit: docs/data_cards/alphafold_demo.md contains the required disclaimer | disclaimer_present=True
+PASS: claims audit: docs/data_cards/clinvar.md has no restricted claims wording | matches=[]
+PASS: claims audit: docs/data_cards/clinvar.md contains the required disclaimer | disclaimer_present=True
+PASS: claims audit: docs/data_cards/megascale.md has no restricted claims wording | matches=[]
+PASS: claims audit: docs/data_cards/megascale.md contains the required disclaimer | disclaimer_present=True
+PASS: claims audit: docs/data_cards/proteingym.md has no restricted claims wording | matches=[]
+PASS: claims audit: docs/data_cards/proteingym.md contains the required disclaimer | disclaimer_present=True
+PASS: claims audit: docs/data_cards/splits.md has no restricted claims wording | matches=[]
+PASS: claims audit: docs/data_cards/splits.md contains the required disclaimer | disclaimer_present=True
+PASS: claims audit: docs/label_definitions.md has no restricted claims wording | matches=[]
+PASS: claims audit: docs/label_definitions.md contains the required disclaimer | disclaimer_present=True
+PASS: claims audit: docs/limitations.md has no restricted claims wording | matches=[]
+PASS: claims audit: docs/limitations.md contains the required disclaimer | disclaimer_present=True
+PASS: claims audit: docs/model_cards/function_tier1.md has no restricted claims wording | matches=[]
+PASS: claims audit: docs/model_cards/function_tier1.md contains the required disclaimer | disclaimer_present=True
+PASS: claims audit: docs/model_cards/stability_tier1.md has no restricted claims wording | matches=[]
+PASS: claims audit: docs/model_cards/stability_tier1.md contains the required disclaimer | disclaimer_present=True
+PASS: claims audit: app/app.py has no restricted claims wording | matches=[]
+PASS: claims audit: app/app.py contains the required disclaimer | disclaimer_present=True
+PASS: leakage audit: stability cluster sets are disjoint across train/test | train_clusters=40; test_clusters=8
+PASS: leakage audit: function cluster sets are disjoint across train/test | train_clusters=25; test_clusters=4
+PASS: leakage audit: stability training excludes case-study proteins and their clusters | case_ids=False; shared_case_clusters=False
+PASS: leakage audit: function training excludes case-study proteins and their clusters | case_ids=False; shared_case_clusters=False
+PASS: leakage audit: stability training excludes all ClinVar-test clusters | shared_clusters=[]
+PASS: leakage audit: function training excludes all ClinVar-test clusters | shared_clusters=[]
+PASS: leakage audit: labels_ddg has no duplicate mutation keys | duplicate_keys=0
+PASS: leakage audit: labels_function has no duplicate mutation keys | duplicate_keys=0
+PASS: leakage audit: external_clinvar has no duplicate mutation keys | duplicate_keys=0
+PASS: leakage audit: model feature inventories contain no ClinVar-derived fields | forbidden_features=[]
+PASS: leakage audit: training fit calls are confined to fold/train variables (static check) | fit_calls=9; suspicious=[]
+PASS: leakage audit: test registry contains one completed, non-repeated entry per approved evaluation | entries=['case_study_dms_P04637', 'case_study_dms_P60484', 'clinvar_external_test', 'function_cluster_test', 'stability_cluster_test']
+PASS: leakage audit: frozen model hashes match all model artifacts | problems=[]
+PASS: leakage audit: feature tables and model metadata use one ESM model | models=['facebook/esm2_t12_35M_UR50D']
+PASS: leakage audit: stability OOF covers each training mutation exactly once | training_rows=45411; oof_rows=45411; duplicate_oof=0
+PASS: leakage audit: function OOF covers each training mutation exactly once | training_rows=71962; oof_rows=71962; duplicate_oof=0
+PASS: derived reports and model cards reproduce byte-for-byte from saved outputs | artifacts=10; stable_hashes=True
+PASS: demo bundle files match manifest hashes and individual size caps | demo_data/predictions.parquet:1036086:True; demo_data/structures/P04637.pdb:254339:True; demo_data/structures/P60484.pdb:275804:True
+PASS: demo contains full 19 x L predictions for both case studies with dashboard metrics | rows=15124; proteins={'P04637': 7467, 'P60484': 7657}; required_columns=True
+PASS: demo manifest and data card carry the disclaimer and AlphaFold source evidence | structures=2; card_present=True
+PASS: stability_tier1.json reports model counts and Tier-1 metadata | proteins=52; rows=45411; tier=tier1
+PASS: function_tier1.json reports model counts and Tier-1 metadata | proteins=26; rows=71962; tier=tier1
+PASS: case-study summary, comparison, and disagreement outputs exist for both proteins | files=['test_case_study_P60484.csv', 'test_case_study_P60484_variants.csv', 'test_case_study_P60484_worst_disagreements.csv', 'test_case_study_P04637.csv', 'test_case_study_P04637_variants.csv', 'test_case_study_P04637_worst_disagreements.csv']
+PASS: deployment, artifact-sharing, and limitations docs exist with disclaimer | docs=['docs/DEPLOY.md', 'docs/SHARING_ARTIFACTS.md', 'docs/limitations.md']
+PASS: pytest -q passes | 119 passed in 13.26s
