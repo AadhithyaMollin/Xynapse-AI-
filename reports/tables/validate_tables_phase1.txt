@@ -1,0 +1,6 @@
+[PASS] mut_esm.parquet
+[PASS] pos_evolution.parquet
+[PASS] pos_function.parquet
+[FAIL] pos_structure.parquet
+       - missing columns: ['wt']
+[PASS] proteins.parquet

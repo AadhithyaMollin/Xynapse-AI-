@@ -1,0 +1,50 @@
+file,table,column,dtype,n_rows,n_null,n_empty_strings,range_ok,range_note,min,max,n_unique,n_zero,n_at_min,n_at_max,n_sentinel_minus1,n_sentinel_999,n_sentinel_neg999
+mut_esm.parquet,mut_esm,protein_id,object,7657,0,0,,non-numeric,,,,,,,,,
+mut_esm.parquet,mut_esm,position,int64,7657,0,0,,no range rule,1.0,403.0,403.0,0.0,19.0,19.0,0.0,0.0,0.0
+mut_esm.parquet,mut_esm,wt,object,7657,0,0,,non-numeric,,,,,,,,,
+mut_esm.parquet,mut_esm,mut,object,7657,0,0,,non-numeric,,,,,,,,,
+mut_esm.parquet,mut_esm,esm_llr,float64,7657,0,0,,no range rule,-14.73255255969707,5.324529767036438,7657.0,0.0,1.0,1.0,0.0,0.0,0.0
+mut_esm.parquet,mut_esm,esm_wt_logp,float64,7657,0,0,,no range rule,-6.3316192626953125,-0.0007103542448021472,403.0,0.0,19.0,19.0,0.0,0.0,0.0
+mut_esm.parquet,mut_esm,esm_mut_logp,float64,7657,0,0,,no range rule,-14.733560562133789,-0.06938283890485764,7655.0,0.0,1.0,1.0,0.0,0.0,0.0
+pos_evolution.parquet,pos_evolution,protein_id,object,403,0,0,,non-numeric,,,,,,,,,
+pos_evolution.parquet,pos_evolution,position,int64,403,0,0,,no range rule,1.0,403.0,403.0,0.0,1.0,1.0,0.0,0.0,0.0
+pos_evolution.parquet,pos_evolution,wt,object,403,0,0,,non-numeric,,,,,,,,,
+pos_evolution.parquet,pos_evolution,cons_entropy,float64,403,0,0,,no range rule,-0.0,0.9709505944546686,3.0,360.0,360.0,2.0,0.0,0.0,0.0
+pos_evolution.parquet,pos_evolution,cons_weighted,float64,403,0,0,,no range rule,0.7753431863886728,1.0,3.0,0.0,2.0,360.0,0.0,0.0,0.0
+pos_evolution.parquet,pos_evolution,gap_frac,float64,403,0,0,True,"observed 0..0.2, expected 0.0..1.0",0.0,0.2,2.0,401.0,401.0,2.0,0.0,0.0,0.0
+pos_evolution.parquet,pos_evolution,n_eff,float64,403,0,0,True,"observed 4..5, expected > 0",4.0,4.999999999999999,2.0,0.0,2.0,401.0,0.0,0.0,0.0
+pos_function.parquet,pos_function,protein_id,object,796,0,0,,non-numeric,,,,,,,,,
+pos_function.parquet,pos_function,position,int64,796,0,0,,no range rule,1.0,403.0,403.0,0.0,2.0,1.0,0.0,0.0,0.0
+pos_function.parquet,pos_function,wt,object,796,0,0,,non-numeric,,,,,,,,,
+pos_function.parquet,pos_function,is_active_site,int64,796,0,0,True,binary (0/1),0.0,1.0,2.0,795.0,795.0,1.0,0.0,0.0,0.0
+pos_function.parquet,pos_function,is_binding_site,int64,796,0,0,True,binary (0/1),0.0,1.0,2.0,792.0,792.0,4.0,0.0,0.0,0.0
+pos_function.parquet,pos_function,is_metal,int64,796,0,0,True,binary (0/1),0.0,0.0,1.0,796.0,796.0,796.0,0.0,0.0,0.0
+pos_function.parquet,pos_function,is_dna_binding,int64,796,0,0,True,binary (0/1),0.0,1.0,2.0,605.0,605.0,191.0,0.0,0.0,0.0
+pos_function.parquet,pos_function,is_disulfide,int64,796,0,0,True,binary (0/1),0.0,0.0,1.0,796.0,796.0,796.0,0.0,0.0,0.0
+pos_function.parquet,pos_function,is_interface,int64,796,0,0,True,binary (0/1),0.0,0.0,1.0,796.0,796.0,796.0,0.0,0.0,0.0
+pos_function.parquet,pos_function,dist_to_nearest_site,object,796,796,0,,non-numeric,,,,,,,,,
+pos_structure .parquet,pos_structure ,protein_id,object,403,0,0,,non-numeric,,,,,,,,,
+pos_structure .parquet,pos_structure ,position,int64,403,0,0,,no range rule,1.0,403.0,403.0,0.0,1.0,1.0,0.0,0.0,0.0
+pos_structure .parquet,pos_structure ,wt,object,403,0,0,,non-numeric,,,,,,,,,
+pos_structure .parquet,pos_structure ,rsasa,float64,403,0,0,True,"observed 0..1.328, expected 0.0..1.5",0.0,1.3281316211418488,362.0,42.0,42.0,1.0,0.0,0.0,0.0
+pos_structure .parquet,pos_structure ,sasa_abs,float64,403,0,0,True,"observed 0..234, expected 0.0..None",0.0,233.9758875727584,362.0,42.0,42.0,1.0,0.0,0.0,0.0
+pos_structure .parquet,pos_structure ,ss8,object,403,0,0,,non-numeric,,,,,,,,,
+pos_structure .parquet,pos_structure ,ss3,object,403,0,0,,non-numeric,,,,,,,,,
+pos_structure .parquet,pos_structure ,n_contacts_8A,int64,403,0,0,True,"observed 2..17, expected 0.0..None",2.0,17.0,16.0,0.0,1.0,1.0,0.0,0.0,0.0
+pos_structure .parquet,pos_structure ,plddt,float64,403,0,0,True,"observed 25.95..98.88, expected 0.0..100.0",25.95,98.88,207.0,0.0,1.0,7.0,0.0,0.0,0.0
+pos_structure.parquet,pos_structure,protein_id,object,403,0,0,,non-numeric,,,,,,,,,
+pos_structure.parquet,pos_structure,position,int64,403,0,0,,no range rule,1.0,403.0,403.0,0.0,1.0,1.0,0.0,0.0,0.0
+pos_structure.parquet,pos_structure,wt,object,403,0,0,,non-numeric,,,,,,,,,
+pos_structure.parquet,pos_structure,rsasa,float64,403,0,0,True,"observed 0..1.328, expected 0.0..1.5",0.0,1.3281316211418488,362.0,42.0,42.0,1.0,0.0,0.0,0.0
+pos_structure.parquet,pos_structure,sasa_abs,float64,403,0,0,True,"observed 0..234, expected 0.0..None",0.0,233.9758875727584,362.0,42.0,42.0,1.0,0.0,0.0,0.0
+pos_structure.parquet,pos_structure,ss8,object,403,0,0,,non-numeric,,,,,,,,,
+pos_structure.parquet,pos_structure,ss3,object,403,0,0,,non-numeric,,,,,,,,,
+pos_structure.parquet,pos_structure,n_contacts_8A,int64,403,0,0,True,"observed 2..17, expected 0.0..None",2.0,17.0,16.0,0.0,1.0,1.0,0.0,0.0,0.0
+pos_structure.parquet,pos_structure,plddt,float64,403,0,0,True,"observed 25.95..98.88, expected 0.0..100.0",25.95,98.88,207.0,0.0,1.0,7.0,0.0,0.0,0.0
+proteins.parquet,proteins,protein_id,object,2,0,0,,non-numeric,,,,,,,,,
+proteins.parquet,proteins,uniprot_id,object,2,0,0,,non-numeric,,,,,,,,,
+proteins.parquet,proteins,protein_name,object,2,0,0,,non-numeric,,,,,,,,,
+proteins.parquet,proteins,sequence,object,2,0,0,,non-numeric,,,,,,,,,
+proteins.parquet,proteins,length,int64,2,0,0,,no range rule,393.0,403.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0
+proteins.parquet,proteins,structure_source,object,2,0,0,,non-numeric,,,,,,,,,
+proteins.parquet,proteins,mean_plddt,float64,2,0,0,,no range rule,75.0501272264631,83.02808933002481,2.0,0.0,1.0,1.0,0.0,0.0,0.0

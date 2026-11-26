@@ -1,0 +1,20 @@
+wrote /Users/maansibr/Desktop/CSE/Xynapse/xynapse-ai/reports/tables/teammate_table_inspection.csv (39 rows)
+wrote /Users/maansibr/Desktop/CSE/Xynapse/xynapse-ai/reports/tables/teammate_value_checks.csv (39 rows)
+msa_logodds present in: none
+
+Per-table verdicts:
+  [OK] mut_esm: no blocking problem
+  [OK] pos_evolution: no blocking problem
+  [OK] pos_function: no blocking problem
+           WARNING all-null column: dist_to_nearest_site
+  [BLOCK] pos_structure: missing required columns ['wt']
+  [OK] proteins: no blocking problem
+
+protein_id sets:
+  mut_esm: P60484
+  pos_evolution: P60484
+  pos_function: P04637|P60484
+  pos_structure: P60484
+  proteins: P04637|P60484
+mut_esm protein_id set: P60484
+ids in mut_esm only: []

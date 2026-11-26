@@ -1,0 +1,20 @@
+{
+  "current_phase": 1,
+  "phases": {
+    "00": {"status": "DONE", "branch": null, "commit_sha": null, "pr_url": null},
+    "01": {"status": "IN_PROGRESS", "branch": "ml/phase-01-baseline", "commit_sha": null, "pr_url": null},
+    "02": {"status": "NOT_STARTED", "branch": "ml/phase-02-datasets", "commit_sha": null, "pr_url": null},
+    "03": {"status": "NOT_STARTED", "branch": "ml/phase-03-labels", "commit_sha": null, "pr_url": null},
+    "04": {"status": "NOT_STARTED", "branch": "ml/phase-04-features", "commit_sha": null, "pr_url": null},
+    "05": {"status": "NOT_STARTED", "branch": "ml/phase-05-splits", "commit_sha": null, "pr_url": null},
+    "06": {"status": "NOT_STARTED", "branch": "ml/phase-06-stability", "commit_sha": null, "pr_url": null},
+    "07": {"status": "NOT_STARTED", "branch": "ml/phase-07-function", "commit_sha": null, "pr_url": null},
+    "08": {"status": "NOT_STARTED", "branch": "ml/phase-08-freeze-test", "commit_sha": null, "pr_url": null},
+    "09": {"status": "NOT_STARTED", "branch": "ml/phase-09-ranking", "commit_sha": null, "pr_url": null},
+    "10": {"status": "NOT_STARTED", "branch": "ml/phase-10-pipeline", "commit_sha": null, "pr_url": null},
+    "11": {"status": "NOT_STARTED", "branch": "ml/phase-11-dashboard", "commit_sha": null, "pr_url": null},
+    "12": {"status": "NOT_STARTED", "branch": "ml/phase-12-docs", "commit_sha": null, "pr_url": null},
+    "13": {"status": "NOT_STARTED", "branch": "ml/phase-13-release", "commit_sha": null, "pr_url": null}
+  },
+  "checkpoint": null
+}
