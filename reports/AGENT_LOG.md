@@ -261,3 +261,17 @@ The owner explicitly authorized continuing past the brief’s checkpoints and pe
 - Staged pre-push checks: PASS for allowlist/locations, README managed block, sizes and secrets; source `reports/gates/phase_01_pre_push.txt` (the final gate reran the same checks after staging).
 - Files were synchronized by the H1 helper; `.sync_manifest.json` remains local and is not a tracked output.
 - Open action: finish the final synchronization/staging review, commit and push `ml/phase-01-baseline`, verify the remote SHA, and open the PR. No data has been downloaded and Phase 2 has not started.
+
+### PHASE REPORT — Phase 1 V2
+
+Predictions are computational hypotheses, not experimental findings.
+
+- Files created: `scripts/sync_to_shared.py`, `scripts/pre_push_check.py`, `scripts/gates/gate_phase_01.py`, `tests/test_phase1_helpers.py`, `reports/STATE.json`, `reports/g0_inspection.txt`, and Phase 1 gate/verification artifacts under `reports/gates/`.
+- Files changed: `scripts/zenodo_fetch.py`, `src/xynapse/schema.py`, `configs/config.yaml`, `.gitignore`, `tests/test_schema.py`, `README.md`, `PROGRESS.md`, and this log.
+- Tests: **47 passed** in the local gate (9.94 s), **47 passed** on the shared-clone tree (10.07 s), and **6 passed** in the helper suite (1.28 s). Sources: `reports/gates/phase_01_gate.txt`, `phase_01_shared_pytest.txt`, and `phase_01_helper_tests.txt`.
+- Gate results: helper tests PASS; contract validator PASS; H2 pre-push checks PASS; model metadata/demo ignore proof PASS; remote branch SHA verification PASS.
+- Staged review: `git status --short` and `git diff --cached --stat` were reviewed before commit; staged paths came from the H1 sync output and H2 accepted the complete staged set.
+- Deviations: setup used the declared unpinned `requirements.txt` in an isolated `.venv`; no system packages were changed. GitHub CLI is not installed, so a compare/PR URL is recorded instead of opening a PR.
+- Data/model measurements: none in this phase.
+- Branch: `ml/phase-01-baseline`; commit SHA and local/remote comparison: `reports/gates/phase_01_push_verification.txt`; compare URL: same file.
+- Status: Phase 1 DONE and pushed. Phase 2 may now start; the owner explicitly waived the brief’s CP checkpoints.

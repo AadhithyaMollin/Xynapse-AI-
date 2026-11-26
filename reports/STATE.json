@@ -1,9 +1,9 @@
 {
-  "current_phase": 1,
+  "current_phase": 2,
   "phases": {
     "00": {"status": "DONE", "branch": null, "commit_sha": null, "pr_url": null},
-    "01": {"status": "IN_PROGRESS", "branch": "ml/phase-01-baseline", "commit_sha": null, "pr_url": null},
-    "02": {"status": "NOT_STARTED", "branch": "ml/phase-02-datasets", "commit_sha": null, "pr_url": null},
+    "01": {"status": "DONE", "branch": "ml/phase-01-baseline", "commit_sha": "a76aa97a54fdfdcae1d9030d46e51a33c1cf53bf", "pr_url": "https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-01-baseline?expand=1"},
+    "02": {"status": "IN_PROGRESS", "branch": "ml/phase-02-datasets", "commit_sha": null, "pr_url": null},
     "03": {"status": "NOT_STARTED", "branch": "ml/phase-03-labels", "commit_sha": null, "pr_url": null},
     "04": {"status": "NOT_STARTED", "branch": "ml/phase-04-features", "commit_sha": null, "pr_url": null},
     "05": {"status": "NOT_STARTED", "branch": "ml/phase-05-splits", "commit_sha": null, "pr_url": null},
@@ -16,5 +16,5 @@
     "12": {"status": "NOT_STARTED", "branch": "ml/phase-12-docs", "commit_sha": null, "pr_url": null},
     "13": {"status": "NOT_STARTED", "branch": "ml/phase-13-release", "commit_sha": null, "pr_url": null}
   },
-  "checkpoint": null
+  "checkpoint": "CP1 and CP2 checkpoints waived by explicit owner instruction"
 }

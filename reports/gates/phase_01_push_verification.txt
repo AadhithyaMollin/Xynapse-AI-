@@ -1,0 +1,5 @@
+Predictions are computational hypotheses, not experimental findings.
+local_sha: a76aa97a54fdfdcae1d9030d46e51a33c1cf53bf
+remote_sha: a76aa97a54fdfdcae1d9030d46e51a33c1cf53bf	refs/heads/ml/phase-01-baseline
+gh: not installed
+compare_url: https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-01-baseline?expand=1

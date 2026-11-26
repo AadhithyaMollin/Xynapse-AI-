@@ -30,6 +30,9 @@
   shared-clone locations were absent. After the owner authorized safe overrides, created
   `.venv`, installed `requirements.txt`, and cloned the configured origin at the required
   sibling path. Phase 1 gate now PASSes; baseline publication is in progress.
+- Phase 1 V2: DONE and pushed to `ml/phase-01-baseline`; SHA and compare URL are
+  recorded in `reports/STATE.json` and `reports/gates/phase_01_push_verification.txt`.
+- Phase 2 STARTED. Owner explicitly waived CP1/CP2 waits; no data acquired yet.
 
 ## Measured runtimes (never estimated)
 - pytest (Phase 1): 10.74 s, 40 passed.
