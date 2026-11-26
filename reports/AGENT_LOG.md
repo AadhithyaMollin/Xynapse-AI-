@@ -295,3 +295,16 @@ Predictions are computational hypotheses, not experimental findings.
 - H2 initially flagged an amino-acid sequence substring as an AWS-key pattern in the assay summary. The report files were changed to retain sequence length and SHA-256 instead of raw sequences; the pre-push secret scan then passed without weakening the check.
 - Shared-clone verification before commit: H2 pre-push checks PASS for 43 staged paths; clean-tree tests PASS, 61 passed in 10.47 s. Exact `git status --short` and `git diff --cached --stat` output is saved in `reports/gates/phase_02_staged_review.txt` (43 files, 6,037 insertions, 3 deletions).
 - Publication status at this log entry: branch `ml/phase-02-datasets` created from the Phase 1 branch; commit/push verification still pending.
+
+### PHASE REPORT — Phase 2
+
+Predictions are computational hypotheses, not experimental findings.
+
+- Files created: Phase 2 data cards and `docs/label_definitions.md`; ClinVar/ProteinGym inspectors, deterministic proposal script, Phase 2 gate, and synthetic tests; saved source-audit, selection, direction, and gate tables under `reports/tables/` and `reports/gates/`.
+- Files changed: `scripts/zenodo_fetch.py`, `PROGRESS.md`, `reports/STATE.json`, and this log.
+- Tests: **61 passed** locally in 10.69 s and **61 passed** in the shared-clone tree in 10.46 s. Sources: `reports/gates/phase_02_pytest.txt` and shared-clone test output documented in this log.
+- Gates: **17 PASS** checks in `reports/gates/phase_02_gate.txt`; staged pre-push check PASS for 44 paths; no raw data were staged; remote branch SHA matched local code commit.
+- Measured results: Tsuboyama 856 eligible domains and 60 proposed; positive pooled X→P project ddG +1.40110918 kcal/mol across 36,712 reliable rows; ProteinGym 30 proposed assays, six case-study assays, and five direction-precheck assays with pooled mean Spearman +0.12184444578563125; ClinVar 9,356,209 rows scanned, two sequence-matched project genes, zero WT mismatches among 2,659 parsed candidates, and 646 filtered unique variants. Source files are listed in the Phase 2 data cards and above.
+- Deviations/open question: ProteinGym assay correlations have mixed signs. Per explicit owner instruction the pooled-mean direction is provisionally used to continue; direction remains unresolved at individual-assay level. Stability-category ProteinGym assays were excluded from function training. GitHub CLI is unavailable, so no PR was opened.
+- Branch: `ml/phase-02-datasets`; phase code commit SHA `c28cc4e65f9b42bec77abd52c8a13ff1995e8066`; remote SHA equality and compare URL are in `reports/gates/phase_02_push_verification.txt`. Compare URL: `https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-02-datasets?expand=1`.
+- Status: Phase 2 DONE and pushed. No model has been fitted. Phase 3 begins next.

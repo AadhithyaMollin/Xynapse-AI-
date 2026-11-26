@@ -39,7 +39,7 @@
 - ESM-2 P04637 (393 aa, 25 batches, mps): 37.65 s.
 - Phase 1 join script: see `reports/tables/nan_report_mut_features.csv` inputs.
 
-## Gate status: G0 [x] G1 [x] G2 [ ] G3 [ ] G4 [ ] G5 [ ]
+## Gate status: G0 [x] G1 [x] G2 [x] G3 [ ] G4 [ ] G5 [ ]
 
 ### Phase 2 — dataset acquisition and inspection (2026-11-26)
 - Data cards: `docs/data_cards/megascale.md`, `docs/data_cards/proteingym.md`, `docs/data_cards/clinvar.md`; definitions: `docs/label_definitions.md`.
@@ -47,4 +47,4 @@
 - ProteinGym: 217 reference assays; 159 mechanically eligible; 6 case-study assays; 70 non-case, non-Stability sequences after assay selection; proposed 30. Direction check: 5 assays, pooled Spearman +0.12184444578563125, signs mixed (3 positive, 2 negative). Owner explicitly authorized continuing with the pooled-mean mapping; direction remains unresolved by assay. Sources: `reports/tables/proteingym_assay_summary.csv`, `reports/tables/proteingym_direction_precheck.csv`, `reports/tables/proteingym_direction_precheck_summary.json`.
 - ClinVar: 9,356,209 rows scanned; 2,659 parsed candidates for PTEN/TP53 with zero WT mismatches; 646 variants retained. Source details in `reports/tables/clinvar_inspection_summary.json` and `docs/data_cards/clinvar.md`.
 - Runtime: ClinVar download 94.10 s; Tsuboyama Dataset 1 member extraction 280.73 s; ProteinGym substitution archive download 32.73 s. Sources: source `.manifest.json` files.
-- Phase 2 gate: PASS; pytest 61 passed in 11.23 s. Raw data remain local/ignored. Phase branch push pending.
+- Phase 2 gate: PASS; pytest 61 passed in 10.69 s locally and 10.46 s on the shared-clone tree. Raw data remain local/ignored. Branch `ml/phase-02-datasets` pushed; code commit `c28cc4e65f9b42bec77abd52c8a13ff1995e8066`; compare URL is recorded in `reports/gates/phase_02_push_verification.txt`.
