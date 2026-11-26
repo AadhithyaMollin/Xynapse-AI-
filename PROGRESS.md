@@ -71,4 +71,11 @@
 - 20 grouped-CV hyperparameter configs completed in 50.098926 s; bounded below 10 min. OOF covers every training row once. `tier1_full` train-only OOF: Spearman 0.480236099, Pearson 0.545773782, RMSE 0.823109547 kcal/mol. See `reports/tables/stability_oof_metrics.csv`; no test scores calculated.
 - All four oriented baselines have positive mean fold Spearman. Per-protein Spearman qualified all 52 proteins at the 30-variant minimum. Source: `reports/tables/stability_baseline_sign_check.json`, `reports/tables/stability_per_protein_oof.csv`.
 - Gate 16/16 PASS; pytest 83 passed in 9.53 s. Source: `reports/gates/phase_06_gate.txt`.
-- Git publication is pending on `ml/phase-06-stability`.
+- Phase 6 pushed on `ml/phase-06-stability`, commit `5c553bb5eecfba4f96e1027b17d63e670be7488a`; compare URL: https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-06-stability?expand=1.
+
+### Phase 7 — function classifier
+- DONE locally. Tier-1 LightGBM with isotonic calibration and a logistic-regression pipeline trained on 26 DMS proteins / 71,962 training rows; 4 test clusters excluded, max training length 465 aa. No Tier-2 model.
+- Calibrated grouped OOF: AUROC 0.642152509, AUPRC 0.599066818, MCC 0.276047653 at 0.587478153, Brier 0.226514778. Isotonic selected over Platt (grouped cross-fit Brier 0.228731878 vs 0.228999995). Sources: `reports/tables/function_oof_metrics.csv`, `function_calibration_method_scores.csv`.
+- Gate 16/16 PASS; pytest 91 passed in 8.81 s. OOF covers all training rows; no test scores. Source: `reports/gates/phase_07_gate.txt`.
+- Timing caveat: original uncached 20-config search runtime was not persisted before the 660 s terminal timeout; do not confuse the 0.001756 s cached lookup with search execution. See Phase 7 entry in `reports/AGENT_LOG.md`. The optimization reduced MCC-threshold finalization from quadratic to sorted cumulative counts.
+- ProteinGym assay-direction evidence remains mixed; function-label mapping is provisional. Publication pending on `ml/phase-07-function`.

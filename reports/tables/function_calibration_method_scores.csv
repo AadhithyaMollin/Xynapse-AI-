@@ -1,0 +1,3 @@
+method,mean_grouped_cv_brier,n_rows
+isotonic,0.22873187843807435,71962
+platt,0.2289999950684703,71962

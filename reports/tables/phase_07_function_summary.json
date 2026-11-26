@@ -1,0 +1,23 @@
+{
+  "n_training_proteins": 26,
+  "n_training_rows": 71962,
+  "n_training_clusters": 25,
+  "n_test_clusters_excluded": 4,
+  "n_oof_rows": 71962,
+  "n_oof_missing": 0,
+  "n_search_configs_completed": 20,
+  "search_runtime_seconds": 0.001756,
+  "search_runtime_this_run_seconds": 0.001558,
+  "search_runtime_scope": "cache_reuse_lookup",
+  "initial_search_runtime_captured": false,
+  "search_runtime_note": "all 20 configurations reused; the uncached search runtime was not saved because its first run hit the terminal timeout",
+  "search_configs_reused": 20,
+  "build_runtime_seconds": 1.091266,
+  "max_training_protein_length": 465,
+  "label_prevalence": 0.4314777243545204,
+  "esm_model": "facebook/esm2_t12_35M_UR50D",
+  "esm_model_short": "esm2_t12_35M",
+  "calibration_method": "isotonic",
+  "tier2_model_exists": false,
+  "held_out_test_used": false
+}

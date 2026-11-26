@@ -371,3 +371,18 @@ Predictions are computational hypotheses, not experimental findings.
 - Validation: Phase 6 gate 16/16 checks PASS; pytest 83 passed in 9.53 s. No held-out test scores were computed.
 - Git publication is pending the Phase 6 push procedure; no test evaluation.
 - Correction to the rounded ESM-only OOF value above: exact saved `stability_oof_metrics.csv` Spearman is 0.4750470126350050 (the earlier `0.475046?` text was an incomplete draft value).
+- Git: branch `ml/phase-06-stability`, commit `5c553bb5eecfba4f96e1027b17d63e670be7488a`; remote SHA matched. Compare URL: https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-06-stability?expand=1.
+
+## Phase 07 — function classifier
+
+**Phase 07 STARTED.** Only DMS-derived labels from the Phase 5 training split are eligible. ClinVar and the held-out cluster split remain unused.
+
+**Phase 07 DONE — PHASE REPORT.**
+- Files: `src/xynapse/classification_metrics.py`, `scripts/train_function.py`, `scripts/gates/gate_phase_07.py`, `tests/test_classification_metrics.py`, `tests/test_function_training.py`; tracked metadata `models/esm2_t12_35M/function_tier1.json`; metrics/calibration/assay tables and gate outputs under `reports/`. OOF Parquet and both joblib model files remain ignored/local.
+- Training-only input: 26 proteins, 25 clusters, 71,962 rows; prevalence 0.431477724; four test clusters excluded; max function-training sequence length 465. DMS labels only. ClinVar and held-out labels were not evaluated.
+- Selected calibrated Tier-1 LightGBM OOF (training only): AUROC 0.642152509, AUPRC 0.599066818, MCC 0.276047653 at threshold 0.587478153; Brier 0.226514778. Calibration selection: isotonic grouped cross-fit Brier 0.228731878 vs Platt 0.228999995. Sources: `reports/tables/function_oof_metrics.csv`, `function_calibration_method_scores.csv`, and model metadata.
+- OOF covers 71,962/71,962 training rows; 20 model fold fits had zero train/validation or train/test cluster overlap. Per-assay AUROC covers 26 training assays. Source: `reports/tables/function_fit_audit.csv` and `function_per_assay_auroc.csv`.
+- Validation: Phase 7 gate 16/16 PASS; pytest 91 passed in 8.81 s. No held-out test results were produced.
+- Runtime deviation: the first training invocation exceeded the terminal's 660 s limit after all 20 search configurations, OOF predictions, and calibration artifacts had been written, but before final metrics/export. Two further invocations hit the same slow MCC-threshold scan. Diagnosed quadratic threshold scoring; replaced it with a tested sorted cumulative-count implementation. Final resumable pass reused all 20 search configs and cached folds; finalization took 1.091266 s. The original uncached search runtime was not persisted, so its exact duration is unresolved; the saved 0.001756 s is cache lookup time, not the original search duration.
+- Direction caveat remains: assay-level ProteinGym signs were mixed in the Phase 2 precheck; project label orientation is provisional despite the pooled/overall Phase 4 check.
+- Git publication pending Phase 7 push.

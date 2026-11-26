@@ -1,0 +1,8 @@
+model,threshold_mcc_max,mcc_max,threshold_source
+negative_esm_llr,4.221611797809601,0.2833502787694698,grouped OOF only
+negative_blosum62,2.0,0.14696628674321893,grouped OOF only
+esm_only,0.5124489440236888,0.2957604192155665,grouped OOF only
+esm_plus_physchem,0.5107079855782918,0.3009004464082121,grouped OOF only
+tier1_full,0.5409682842802993,0.2977010457622219,grouped OOF only
+logistic_tier1,0.512707519526269,0.306569723352705,grouped OOF only
+tier1_full_calibrated,0.5874781534295241,0.27604765310840523,grouped OOF only

@@ -1,0 +1,17 @@
+Predictions are computational hypotheses, not experimental findings.
+PASS: LightGBM + calibrator and logistic regression artifacts exist | lgbm=True; logistic=True
+PASS: model binary hashes match metadata | LGBM=e7a8d9f5f3d0e19450f7bfd178c9dd37aab3123d77c22b53634478bf53d3ded2; logistic=554433453d26ab00a3cde8b12b95f6bd9d042e6be780e88418bc40ca159f391f
+PASS: logistic regression uses a sklearn Pipeline with preprocessing | pipeline=Pipeline
+PASS: saved feature lists are Tier-1 only; no predicted ddG or ClinVar features | features=12
+PASS: one configured ESM-2 35M model and Tier-2 absence recorded | ESM=facebook/esm2_t12_35M_UR50D; Tier-2=False
+PASS: function training table is DMS-only, both classes present, and at least 10 proteins | train proteins=26; rows=71962; prevalence=0.431478
+PASS: OOF probabilities cover each training mutation exactly once | OOF rows=71962; training rows=71962
+PASS: fit/validation and fit/test cluster overlaps are zero | fold fits=20; max test overlap=0
+PASS: OOF metrics include AUROC/AUPRC/MCC/prevalence and task sample counts | models=7
+PASS: MCC thresholds were selected from grouped OOF predictions only | threshold rows=7
+PASS: per-assay AUROC distribution is present for 26 training assays | assays=26; rows=182
+PASS: calibrator selected by cross-fitted grouped Brier and fit on all OOF rows | selected=isotonic; mean Brier={'isotonic': 0.22873187843807435, 'platt': 0.2289999950684703}
+PASS: calibration curve data contains raw and calibrated OOF probabilities | rows=19; binned count=143924
+PASS: 20 grouped-CV configurations completed and all results are recorded | configs=20; reused=20; search scope=cache_reuse_lookup; original duration not captured
+PASS: max training sequence length and provisional label-direction caveat recorded | max length=465; direction caveat present
+PASS: pytest -q passes | 91 passed in 8.81s
