@@ -18,7 +18,7 @@ Predictions are computational hypotheses, not experimental findings.
 | 10 | DONE | `ml/phase-10-pipeline` | `792ebbe6638ee401dca8533597a34f51419b8fba` | https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-10-pipeline?expand=1 |
 | 11 | DONE | `ml/phase-11-dashboard` | `666a47ca71852f9c729c474aaa2ae07309aad65b` | https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-11-dashboard?expand=1 |
 | 12 | DONE | `ml/phase-12-docs` | `fc79ca5aabd403f459625e9229456b790b492b25` | https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-12-docs?expand=1 |
-| 13 | IN_PROGRESS | `ml/phase-13-release` | `pending` | https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-13-release?expand=1 |
+| 13 | DONE | `ml/phase-13-release` | `25ec683f0af38189260e8d2a8458fdf8a6ed5b53` | https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-13-release?expand=1 |
 
 Phase statuses, branch names, SHAs, and links are read from `reports/STATE.json`. A compare URL is supplied where a pull request was not created. The human owner merges PRs; this workflow did not merge them or push to `main`.
 
@@ -38,7 +38,7 @@ Phase statuses, branch names, SHAs, and links are read from `reports/STATE.json`
 | Phase 10 | DONE | `src/xynapse/pipeline.py`, `scripts/gates/gate_phase_10.py` |
 | Phase 11 | DONE | `app/app.py`, dashboard tests and gate report |
 | Phase 12 | DONE | `README.md` managed block, `docs/`, `demo_data/`, model cards and report/audit scripts |
-| Phase 13 | IN_PROGRESS | `scripts/verify_all.py`, `scripts/gates/gate_phase_13.py`, `reports/FINAL_REPORT.md` |
+| Phase 13 | DONE | `scripts/verify_all.py`, `scripts/gates/gate_phase_13.py`, `reports/FINAL_REPORT.md` |
 
 ## Training data and model inventory
 

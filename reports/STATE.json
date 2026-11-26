@@ -14,7 +14,7 @@
     "10": {"status": "DONE", "branch": "ml/phase-10-pipeline", "commit_sha": "792ebbe6638ee401dca8533597a34f51419b8fba", "pr_url": "https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-10-pipeline?expand=1"},
     "11": {"status": "DONE", "branch": "ml/phase-11-dashboard", "commit_sha": "666a47ca71852f9c729c474aaa2ae07309aad65b", "pr_url": "https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-11-dashboard?expand=1"},
     "12": {"status": "DONE", "branch": "ml/phase-12-docs", "commit_sha": "fc79ca5aabd403f459625e9229456b790b492b25", "pr_url": "https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-12-docs?expand=1"},
-    "13": {"status": "IN_PROGRESS", "branch": "ml/phase-13-release", "commit_sha": null, "pr_url": "https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-13-release?expand=1"}
+    "13": {"status": "DONE", "branch": "ml/phase-13-release", "commit_sha": "25ec683f0af38189260e8d2a8458fdf8a6ed5b53", "pr_url": "https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-13-release?expand=1"}
   },
   "checkpoint": "CP1 and CP2 checkpoints waived by explicit owner instruction"
 }
