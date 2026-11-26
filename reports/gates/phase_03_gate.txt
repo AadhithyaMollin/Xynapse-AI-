@@ -1,0 +1,15 @@
+Predictions are computational hypotheses, not experimental findings.
+PASS: train_proteins contract and sequence lengths | n=92
+PASS: labels_ddg validator PASS | rows=52801
+PASS: labels_ddg has unique mutation keys | duplicate_keys=0
+PASS: labels_function validator PASS | rows=76777
+PASS: labels_function has unique mutation keys | duplicate_keys=0
+PASS: external_clinvar validator PASS | rows=646
+PASS: external_clinvar has unique mutation keys | duplicate_keys=0
+PASS: at least 10 training proteins in each model-label table | ddG=60; function=30
+PASS: ClinVar external table has observed mapped proteins and at least 10 variants | external-only proteins=2; variants=646; constrained to proteins.parquet mappings
+PASS: all output protein IDs resolve against train_proteins | train_proteins=92
+PASS: label prevalence table covers all three outputs | rows=3
+PASS: written project-ddG X-to-proline sign check is positive | n=2620; mean=1.389019036
+PASS: summary records no dropped selected proteins and all label validators passed | dropped=0; runtime=8.58s
+PASS: pytest -q passes | 66 passed in 11.67s

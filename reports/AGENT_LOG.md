@@ -308,3 +308,15 @@ Predictions are computational hypotheses, not experimental findings.
 - Deviations/open question: ProteinGym assay correlations have mixed signs. Per explicit owner instruction the pooled-mean direction is provisionally used to continue; direction remains unresolved at individual-assay level. Stability-category ProteinGym assays were excluded from function training. GitHub CLI is unavailable, so no PR was opened.
 - Branch: `ml/phase-02-datasets`; phase code commit SHA `c28cc4e65f9b42bec77abd52c8a13ff1995e8066`; remote SHA equality and compare URL are in `reports/gates/phase_02_push_verification.txt`. Compare URL: `https://github.com/AadhithyaMollin/Xynapse-AI-/compare/ml/phase-02-datasets?expand=1`.
 - Status: Phase 2 DONE and pushed. No model has been fitted. Phase 3 begins next.
+
+## Phase 3 — labels and training protein table
+
+**Phase 03 STARTED.** The work uses the saved Phase 2 proposals and source-derived label conventions. Function labels retain the owner-authorized pooled direction and its unresolved mixed-assay evidence.
+
+- First builder run wrote contract-valid tables, then stopped at a too-broad 10-protein check on `external_clinvar`. Phase 2 permits ClinVar mapping only to the two proteins in the read-only teammate table, and ClinVar is external-only. The check was corrected to apply the 10-protein minimum to the training label tables while requiring at least 10 external variants; the run then completed. This is an explicit scope exception, not an added or inferred protein mapping.
+- Final build summary: 92 rows in `train_proteins` (60 selected stability domains, 30 selected ProteinGym target sequences, and the two case-study/external proteins); 52,801 ddG rows over 60 proteins; 76,777 function rows over 30 proteins; 646 ClinVar external rows over 2 proteins. Sources: `reports/tables/phase_03_label_build_summary.json` and `reports/tables/label_prevalence.csv`.
+- Duplicate Tsuboyama observations: 52,893 reliable observations collapsed to 52,801 mutation keys; 92 repeated observations averaged. Zero selected proteins were dropped. No WT mismatches remained after numbering correction. Source: `reports/tables/phase_03_label_build_summary.json`.
+- Written-table project-sign check: 2,620 X→P rows, mean ddG +1.389019036 kcal/mol. All three mutation tables and the protein table passed `validate_table`; no duplicate keys. Source: `reports/tables/sign_check_megascale_labels.csv` and the build summary.
+- Function conversion uses `1 - source_binary_label` under the explicitly authorized pooled-mean orientation; the audit still records `mixed_assay_signs`. Raw `DMS_score` and within-assay percentile ranks are retained per assay; no cross-assay raw-score pooling is done.
+- Phase 3 test/gate output: 66 passed in 11.67 s; all 14 checks PASS in `reports/gates/phase_03_gate.txt`. Build runtime: 8.58 s, from the saved build summary.
+- Phase 3 changes currently await push; no model has been trained and no test set has been evaluated.

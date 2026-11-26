@@ -46,6 +46,9 @@ TABLES = {
                    "required": MUT_KEYS + LABEL_DDG_COLS, "complete": False},
     "labels_function": {"level": "mutation", "keys": MUT_KEYS,
                         "required": MUT_KEYS + LABEL_FUNC_COLS, "complete": False},
+    "external_clinvar": {"level": "mutation", "keys": MUT_KEYS,
+                          "required": MUT_KEYS + ["label", "review_stars", "clinvar_variation_id", "gene"],
+                          "complete": False},
 }
 
 

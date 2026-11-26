@@ -23,3 +23,10 @@ def test_tier1_features_contract_is_additive_and_complete():
     assert TABLES["features_tier1"]["level"] == "mutation"
     assert TABLES["features_tier1"]["complete"] is True
     assert TABLES["features_tier1"]["required"] == MUT_KEYS + MUT_ESM_COLS + MUT_PHYS_COLS + TIER1_EXTRA_COLS
+
+
+def test_external_clinvar_contract_is_additive():
+    assert TABLES["external_clinvar"]["level"] == "mutation"
+    assert TABLES["external_clinvar"]["required"] == MUT_KEYS + [
+        "label", "review_stars", "clinvar_variation_id", "gene"
+    ]

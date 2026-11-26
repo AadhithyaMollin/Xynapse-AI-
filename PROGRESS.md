@@ -48,3 +48,9 @@
 - ClinVar: 9,356,209 rows scanned; 2,659 parsed candidates for PTEN/TP53 with zero WT mismatches; 646 variants retained. Source details in `reports/tables/clinvar_inspection_summary.json` and `docs/data_cards/clinvar.md`.
 - Runtime: ClinVar download 94.10 s; Tsuboyama Dataset 1 member extraction 280.73 s; ProteinGym substitution archive download 32.73 s. Sources: source `.manifest.json` files.
 - Phase 2 gate: PASS; pytest 61 passed in 10.69 s locally and 10.46 s on the shared-clone tree. Raw data remain local/ignored. Branch `ml/phase-02-datasets` pushed; code commit `c28cc4e65f9b42bec77abd52c8a13ff1995e8066`; compare URL is recorded in `reports/gates/phase_02_push_verification.txt`.
+
+### Phase 3 — labels and training proteins
+- STARTED. No model fitting or test-set evaluation is performed in this phase.
+- `train_proteins`: 92 proteins; ddG labels: 52,801 rows/60 proteins; function labels: 76,777 rows/30 proteins; external ClinVar: 646 rows/2 proteins. The ClinVar 2-protein count follows the source-mapping restriction and is not a training-protein shortfall. Source: `reports/tables/phase_03_label_build_summary.json`.
+- Duplicate reliable Tsuboyama observations: 92 rows collapsed into 52,801 mutation keys; written X→P sign check is +1.389019036 kcal/mol over 2,620 rows. Source: `reports/tables/phase_03_label_build_summary.json` and `reports/tables/sign_check_megascale_labels.csv`.
+- Gate PASS; 66 tests passed in 11.67 s; build runtime 8.58 s. Source: `reports/gates/phase_03_gate.txt` and build summary. Push pending.
