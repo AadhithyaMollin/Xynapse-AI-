@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Phase 8 freeze gate; held-out evaluations must still be untouched."""
+"""Phase 8 gate for frozen models and the completed one-time test evaluations."""
 from __future__ import annotations
 
 import json
@@ -14,6 +14,27 @@ import yaml
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "src"))
 DISCLAIMER = "Predictions are computational hypotheses, not experimental findings."
+EXPECTED_EVALUATIONS = {
+    "stability_cluster_test",
+    "function_cluster_test",
+    "case_study_dms_P60484",
+    "case_study_dms_P04637",
+    "clinvar_external_test",
+}
+EXPECTED_TEST_OUTPUTS = (
+    "test_stability_cluster.csv",
+    "test_stability_per_protein.csv",
+    "test_function_cluster.csv",
+    "test_function_per_assay.csv",
+    "test_case_study_P60484.csv",
+    "test_case_study_P60484_variants.csv",
+    "test_case_study_P60484_worst_disagreements.csv",
+    "test_case_study_P04637.csv",
+    "test_case_study_P04637_variants.csv",
+    "test_case_study_P04637_worst_disagreements.csv",
+    "test_clinvar_external.csv",
+    "test_clinvar_counts_by_gene_label.csv",
+)
 
 
 def run_gate() -> int:
@@ -30,9 +51,9 @@ def run_gate() -> int:
     ok_hashes, hash_problems = verify_frozen(frozen_path, ROOT / "models/esm2_t12_35M")
 
     evidence_values = evidence.set_index("threshold").value.to_dict()
-    keys = ["ddg_damaging", "ddg_stabilizing", "p_impact_high", "p_impact_low"]
+    threshold_keys = ["ddg_damaging", "ddg_stabilizing", "p_impact_high", "p_impact_low"]
     values_match = True
-    for key in keys:
+    for key in threshold_keys:
         expected, actual = evidence_values[key], thresholds[key]
         if pd.isna(expected) and actual is None:
             continue
@@ -62,22 +83,39 @@ def run_gate() -> int:
     checks.append(("freeze model inventory hashes all artifacts and still matches disk",
                    ok_hashes and len(frozen.get("model_files_sha256", {})) == 5 and not hash_problems,
                    f"files={len(frozen.get('model_files_sha256', {}))}; problems={hash_problems}"))
+    stability_meta = json.loads((ROOT / "models/esm2_t12_35M/stability_tier1.json").read_text())
+    function_meta = json.loads((ROOT / "models/esm2_t12_35M/function_tier1.json").read_text())
     checks.append(("frozen threshold and feature inventories match model metadata",
                    frozen.get("thresholds") == thresholds
-                   and frozen.get("feature_lists", {}).get("stability")
-                   == json.loads((ROOT / "models/esm2_t12_35M/stability_tier1.json").read_text())["feature_list"]
-                   and frozen.get("feature_lists", {}).get("function")
-                   == json.loads((ROOT / "models/esm2_t12_35M/function_tier1.json").read_text())["feature_list"],
+                   and frozen.get("feature_lists", {}).get("stability") == stability_meta["feature_list"]
+                   and frozen.get("feature_lists", {}).get("function") == function_meta["feature_list"],
                    f"thresholds frozen={frozen.get('thresholds')}"))
     checks.append(("freeze uses only the configured ESM-2 35M model",
                    frozen.get("esm_model") == "facebook/esm2_t12_35M_UR50D"
                    and frozen.get("esm_model_short") == "esm2_t12_35M",
                    f"{frozen.get('esm_model')}"))
-    registry = ROOT / "reports/test_eval_registry.json"
-    registry_empty = not registry.exists() or not json.loads(registry.read_text()).get("evaluations")
-    test_reports = list((ROOT / "reports/tables").glob("test_*.csv"))
-    checks.append(("no test evaluation has occurred before freeze publication", registry_empty and not test_reports,
-                   f"registry_exists={registry.exists()}; test_report_files={len(test_reports)}"))
+
+    registry_path = ROOT / "reports/test_eval_registry.json"
+    registry = json.loads(registry_path.read_text()) if registry_path.is_file() else {}
+    evaluations = registry.get("evaluations", {})
+    registry_complete = set(evaluations) == EXPECTED_EVALUATIONS and all(
+        evaluations[name].get("status") == "completed" for name in EXPECTED_EVALUATIONS
+    ) and not registry.get("failures")
+    checks.append(("the five named test evaluations are recorded exactly once and completed",
+                   registry_complete,
+                   f"names={sorted(evaluations)}; statuses={{{', '.join(f'{k}: {v.get(chr(115)+chr(116)+chr(97)+chr(116)+chr(117)+chr(115))}' for k, v in sorted(evaluations.items()))}}}"))
+    outputs_dir = ROOT / "reports/tables"
+    missing_outputs = [name for name in EXPECTED_TEST_OUTPUTS if not (outputs_dir / name).is_file()]
+    empty_outputs = [name for name in EXPECTED_TEST_OUTPUTS if (outputs_dir / name).is_file()
+                     and (outputs_dir / name).stat().st_size == 0]
+    checks.append(("all one-time test evaluation tables are saved and non-empty",
+                   not missing_outputs and not empty_outputs,
+                   f"missing={missing_outputs}; empty={empty_outputs}"))
+    summary_path = outputs_dir / "phase_08_test_evaluation_summary.json"
+    summary = json.loads(summary_path.read_text()) if summary_path.is_file() else {}
+    checks.append(("saved evaluation summary covers all five completed evaluations",
+                   set(summary.get("evaluations", {})) == EXPECTED_EVALUATIONS,
+                   f"names={sorted(summary.get('evaluations', {}))}"))
 
     test_run = subprocess.run([sys.executable, "-m", "pytest", "-q"], cwd=ROOT, capture_output=True, text=True)
     (ROOT / "reports/gates/phase_08_pytest.txt").write_text(test_run.stdout + test_run.stderr)

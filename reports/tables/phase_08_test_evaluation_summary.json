@@ -1,0 +1,390 @@
+{
+  "evaluations": {
+    "stability_cluster_test": {
+      "n_rows": 7390,
+      "n_proteins": 8,
+      "n_clusters": 8,
+      "metrics": [
+        {
+          "model": "negative_blosum62",
+          "n": 7390,
+          "spearman": 0.1533816098236799,
+          "pearson": 0.1781087120259975,
+          "rmse": 1.792570330778204,
+          "n_rows": 7390,
+          "n_proteins": 8,
+          "tier": "tier1"
+        },
+        {
+          "model": "abs_d_hydropathy",
+          "n": 7390,
+          "spearman": 0.05842464384572783,
+          "pearson": 0.0683454695320507,
+          "rmse": 3.9557582035956824,
+          "n_rows": 7390,
+          "n_proteins": 8,
+          "tier": "tier1"
+        },
+        {
+          "model": "abs_d_volume",
+          "n": 7390,
+          "spearman": 0.12917821497085444,
+          "pearson": 0.1340586685562003,
+          "rmse": 55.440218048195426,
+          "n_rows": 7390,
+          "n_proteins": 8,
+          "tier": "tier1"
+        },
+        {
+          "model": "negative_esm_llr",
+          "n": 7390,
+          "spearman": 0.16041434828724846,
+          "pearson": 0.2267310616371056,
+          "rmse": 2.156204108158712,
+          "n_rows": 7390,
+          "n_proteins": 8,
+          "tier": "tier1"
+        },
+        {
+          "model": "tier1_full",
+          "n": 7390,
+          "spearman": 0.4523390593252031,
+          "pearson": 0.5571748386680233,
+          "rmse": 0.8587660488399698,
+          "n_rows": 7390,
+          "n_proteins": 8,
+          "tier": "tier1"
+        }
+      ]
+    },
+    "function_cluster_test": {
+      "n_rows": 4815,
+      "n_proteins": 4,
+      "n_clusters": 4,
+      "metrics": [
+        {
+          "model": "negative_esm_llr",
+          "n_rows": 4815,
+          "n_positive": 1674,
+          "n_negative": 3141,
+          "prevalence": 0.34766355140186916,
+          "auroc": 0.7157911112784741,
+          "auprc": 0.6118987445025704,
+          "mcc": 0.33177026572011303,
+          "threshold": 4.221611797809601,
+          "brier": NaN,
+          "n_proteins": 4,
+          "tier": "tier1"
+        },
+        {
+          "model": "negative_blosum62",
+          "n_rows": 4815,
+          "n_positive": 1674,
+          "n_negative": 3141,
+          "prevalence": 0.34766355140186916,
+          "auroc": 0.613041870782882,
+          "auprc": 0.4182691842450482,
+          "mcc": 0.16225388549470132,
+          "threshold": 2.0,
+          "brier": NaN,
+          "n_proteins": 4,
+          "tier": "tier1"
+        },
+        {
+          "model": "logistic_tier1",
+          "n_rows": 4815,
+          "n_positive": 1674,
+          "n_negative": 3141,
+          "prevalence": 0.34766355140186916,
+          "auroc": 0.7633682094866636,
+          "auprc": 0.6674677710815582,
+          "mcc": 0.4046250285674738,
+          "threshold": 0.512707519526269,
+          "brier": 0.1877207873282722,
+          "n_proteins": 4,
+          "tier": "tier1"
+        },
+        {
+          "model": "tier1_full_calibrated",
+          "n_rows": 4815,
+          "n_positive": 1674,
+          "n_negative": 3141,
+          "prevalence": 0.34766355140186916,
+          "auroc": 0.7570751729638872,
+          "auprc": 0.6540219217863887,
+          "mcc": 0.37972523917436884,
+          "threshold": 0.5874781534295241,
+          "brier": 0.18865405688148276,
+          "n_proteins": 4,
+          "tier": "tier1"
+        }
+      ]
+    },
+    "case_study_dms_P60484": {
+      "protein_id": "P60484",
+      "n_assays": 2,
+      "n_rows": 12343,
+      "assay_metrics": [
+        {
+          "protein_id": "P60484",
+          "assay_id": "PTEN_HUMAN_Matreyek_2021",
+          "phenotype": "score_total",
+          "selection_type": "Protein stability",
+          "coarse_selection_type": "Expression",
+          "n_rows": 5083,
+          "n_positive": 2542,
+          "n_negative": 2541,
+          "prevalence": 0.5000983671060397,
+          "auroc": 0.6836636053072644,
+          "auprc": 0.6664528925018269,
+          "mcc": 0.2516048717886171,
+          "threshold": 0.58747815343,
+          "brier": 0.2324706462147389,
+          "spearman_p_impact_DMS_score": -0.3836032190534638
+        },
+        {
+          "protein_id": "P60484",
+          "assay_id": "PTEN_HUMAN_Mighell_2018",
+          "phenotype": "Fitness_score",
+          "selection_type": "lipid phosphatase activity",
+          "coarse_selection_type": "Activity",
+          "n_rows": 7260,
+          "n_positive": 1881,
+          "n_negative": 5379,
+          "prevalence": 0.2590909090909091,
+          "auroc": 0.8181476707763143,
+          "auprc": 0.6929474784434129,
+          "mcc": 0.516187611320804,
+          "threshold": 0.58747815343,
+          "brier": 0.1651644693905695,
+          "spearman_p_impact_DMS_score": -0.481170630353114
+        }
+      ],
+      "assay_metadata": [
+        {
+          "assay_id": "PTEN_HUMAN_Matreyek_2021",
+          "phenotype": "score_total",
+          "selection_type": "Protein stability",
+          "coarse_selection_type": "Expression",
+          "n_mutations": 5083,
+          "rejected": {
+            "non_single": 0,
+            "invalid_label_or_score": 0,
+            "wt_mismatch": 0,
+            "conflicting_duplicate_labels": 0
+          }
+        },
+        {
+          "assay_id": "PTEN_HUMAN_Mighell_2018",
+          "phenotype": "Fitness_score",
+          "selection_type": "lipid phosphatase activity",
+          "coarse_selection_type": "Activity",
+          "n_mutations": 7260,
+          "rejected": {
+            "non_single": 0,
+            "invalid_label_or_score": 0,
+            "wt_mismatch": 0,
+            "conflicting_duplicate_labels": 0
+          }
+        }
+      ]
+    },
+    "case_study_dms_P04637": {
+      "protein_id": "P04637",
+      "n_assays": 4,
+      "n_rows": 23392,
+      "assay_metrics": [
+        {
+          "protein_id": "P04637",
+          "assay_id": "P53_HUMAN_Giacomelli_2018_Null_Etoposide",
+          "phenotype": "A549_p53NULL_Etoposide_Z-score",
+          "selection_type": "Growth",
+          "coarse_selection_type": "OrganismalFitness",
+          "n_rows": 7448,
+          "n_positive": 1865,
+          "n_negative": 5583,
+          "prevalence": 0.2504027926960258,
+          "auroc": 0.7377489784912932,
+          "auprc": 0.4891765497941399,
+          "mcc": 0.2311525762054212,
+          "threshold": 0.58747815343,
+          "brier": 0.1772895944282296,
+          "spearman_p_impact_DMS_score": -0.37732482891852875
+        },
+        {
+          "protein_id": "P04637",
+          "assay_id": "P53_HUMAN_Giacomelli_2018_Null_Nutlin",
+          "phenotype": "A549_p53NULL_Nutlin-3_Z-score",
+          "selection_type": "Growth",
+          "coarse_selection_type": "OrganismalFitness",
+          "n_rows": 7448,
+          "n_positive": 3723,
+          "n_negative": 3725,
+          "prevalence": 0.4998657357679914,
+          "auroc": 0.6758941244972753,
+          "auprc": 0.6650217578757786,
+          "mcc": 0.15148252654240127,
+          "threshold": 0.58747815343,
+          "brier": 0.25210458476447933,
+          "spearman_p_impact_DMS_score": -0.38683008376689226
+        },
+        {
+          "protein_id": "P04637",
+          "assay_id": "P53_HUMAN_Giacomelli_2018_WT_Nutlin",
+          "phenotype": "A549_p53WT_Nutlin-3_Z-score",
+          "selection_type": "Growth",
+          "coarse_selection_type": "OrganismalFitness",
+          "n_rows": 7448,
+          "n_positive": 1392,
+          "n_negative": 6056,
+          "prevalence": 0.18689581095596133,
+          "auroc": 0.7609551632085212,
+          "auprc": 0.44094944398736935,
+          "mcc": 0.2685713221059571,
+          "threshold": 0.58747815343,
+          "brier": 0.16110373261022518,
+          "spearman_p_impact_DMS_score": -0.377538310472838
+        },
+        {
+          "protein_id": "P04637",
+          "assay_id": "P53_HUMAN_Kotler_2018",
+          "phenotype": "RFS_H1299",
+          "selection_type": "Growth",
+          "coarse_selection_type": "OrganismalFitness",
+          "n_rows": 1048,
+          "n_positive": 427,
+          "n_negative": 621,
+          "prevalence": 0.4074427480916031,
+          "auroc": 0.742535835907183,
+          "auprc": 0.6412650899615695,
+          "mcc": 0.2342511040063055,
+          "threshold": 0.58747815343,
+          "brier": 0.21148720209212024,
+          "spearman_p_impact_DMS_score": -0.43311045517857344
+        }
+      ],
+      "assay_metadata": [
+        {
+          "assay_id": "P53_HUMAN_Giacomelli_2018_Null_Etoposide",
+          "phenotype": "A549_p53NULL_Etoposide_Z-score",
+          "selection_type": "Growth",
+          "coarse_selection_type": "OrganismalFitness",
+          "n_mutations": 7448,
+          "rejected": {
+            "non_single": 0,
+            "invalid_label_or_score": 0,
+            "wt_mismatch": 19,
+            "conflicting_duplicate_labels": 0
+          }
+        },
+        {
+          "assay_id": "P53_HUMAN_Giacomelli_2018_Null_Nutlin",
+          "phenotype": "A549_p53NULL_Nutlin-3_Z-score",
+          "selection_type": "Growth",
+          "coarse_selection_type": "OrganismalFitness",
+          "n_mutations": 7448,
+          "rejected": {
+            "non_single": 0,
+            "invalid_label_or_score": 0,
+            "wt_mismatch": 19,
+            "conflicting_duplicate_labels": 0
+          }
+        },
+        {
+          "assay_id": "P53_HUMAN_Giacomelli_2018_WT_Nutlin",
+          "phenotype": "A549_p53WT_Nutlin-3_Z-score",
+          "selection_type": "Growth",
+          "coarse_selection_type": "OrganismalFitness",
+          "n_mutations": 7448,
+          "rejected": {
+            "non_single": 0,
+            "invalid_label_or_score": 0,
+            "wt_mismatch": 19,
+            "conflicting_duplicate_labels": 0
+          }
+        },
+        {
+          "assay_id": "P53_HUMAN_Kotler_2018",
+          "phenotype": "RFS_H1299",
+          "selection_type": "Growth",
+          "coarse_selection_type": "OrganismalFitness",
+          "n_mutations": 1048,
+          "rejected": {
+            "non_single": 0,
+            "invalid_label_or_score": 0,
+            "wt_mismatch": 0,
+            "conflicting_duplicate_labels": 0
+          }
+        }
+      ]
+    },
+    "clinvar_external_test": {
+      "n_variants": 646,
+      "n_proteins": 2,
+      "overall_metrics": {
+        "n_rows": 646,
+        "n_positive": 482,
+        "n_negative": 164,
+        "prevalence": 0.7461300309597523,
+        "auroc": 0.869244003643356,
+        "auprc": 0.947389863650646,
+        "mcc": 0.33585504837956465,
+        "threshold": 0.58747815343,
+        "brier": 0.23137343708443298
+      },
+      "per_gene_metrics": [
+        {
+          "gene": "PTEN",
+          "n_rows": 267,
+          "n_positive": 257,
+          "n_negative": 10,
+          "prevalence": 0.9625468164794008,
+          "auroc": 0.9795719844357977,
+          "auprc": 0.9987697775146395,
+          "mcc": 0.2071073900201289,
+          "threshold": 0.58747815343,
+          "brier": 0.19714163771259852
+        },
+        {
+          "gene": "TP53",
+          "n_rows": 379,
+          "n_positive": 225,
+          "n_negative": 154,
+          "prevalence": 0.5936675461741425,
+          "auroc": 0.795036075036075,
+          "auprc": 0.8347375186511947,
+          "mcc": 0.2225159208071199,
+          "threshold": 0.58747815343,
+          "brier": 0.2554892429743533
+        }
+      ],
+      "counts_by_gene_label": [
+        {
+          "gene": "PTEN",
+          "label": 0,
+          "n_variants": 10
+        },
+        {
+          "gene": "PTEN",
+          "label": 1,
+          "n_variants": 257
+        },
+        {
+          "gene": "TP53",
+          "label": 0,
+          "n_variants": 154
+        },
+        {
+          "gene": "TP53",
+          "label": 1,
+          "n_variants": 225
+        }
+      ]
+    }
+  },
+  "failures": [],
+  "frozen_at_utc": "2026-11-26T12:27:27.501075+00:00",
+  "esm_model": "facebook/esm2_t12_35M_UR50D",
+  "runtime_seconds": 1.435982,
+  "disclaimer": "Predictions are computational hypotheses, not experimental findings."
+}

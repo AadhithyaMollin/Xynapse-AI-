@@ -7,5 +7,7 @@ PASS: function thresholds use calibrated grouped OOF predictions | function OOF 
 PASS: freeze model inventory hashes all artifacts and still matches disk | files=5; problems=[]
 PASS: frozen threshold and feature inventories match model metadata | thresholds frozen={'ddg_damaging': 0.676349007871, 'ddg_stabilizing': 0.0210001491369, 'p_impact_high': 0.58747815343, 'p_impact_low': None}
 PASS: freeze uses only the configured ESM-2 35M model | facebook/esm2_t12_35M_UR50D
-PASS: no test evaluation has occurred before freeze publication | registry_exists=False; test_report_files=0
-PASS: pytest -q passes | 96 passed in 8.47s
+PASS: the five named test evaluations are recorded exactly once and completed | names=['case_study_dms_P04637', 'case_study_dms_P60484', 'clinvar_external_test', 'function_cluster_test', 'stability_cluster_test']; statuses={case_study_dms_P04637: completed, case_study_dms_P60484: completed, clinvar_external_test: completed, function_cluster_test: completed, stability_cluster_test: completed}
+PASS: all one-time test evaluation tables are saved and non-empty | missing=[]; empty=[]
+PASS: saved evaluation summary covers all five completed evaluations | names=['case_study_dms_P04637', 'case_study_dms_P60484', 'clinvar_external_test', 'function_cluster_test', 'stability_cluster_test']
+PASS: pytest -q passes | 98 passed in 11.06s
