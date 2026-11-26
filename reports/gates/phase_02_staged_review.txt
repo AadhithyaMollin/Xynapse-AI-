@@ -1,0 +1,90 @@
+git status --short:
+M  PROGRESS.md
+A  docs/data_cards/clinvar.md
+A  docs/data_cards/megascale.md
+A  docs/data_cards/proteingym.md
+A  docs/label_definitions.md
+M  reports/AGENT_LOG.md
+M  reports/STATE.json
+A  reports/gates/phase_01_tip_verification.txt
+A  reports/gates/phase_02_gate.txt
+A  reports/gates/phase_02_pytest.txt
+A  reports/tables/case_study_assays.csv
+A  reports/tables/clinvar_category_values.csv
+A  reports/tables/clinvar_external_counts.csv
+A  reports/tables/clinvar_inspection_summary.json
+A  reports/tables/clinvar_review_status_mapping.csv
+A  reports/tables/clinvar_wt_mismatch_rates.csv
+A  reports/tables/megascale_domain_summary.csv
+A  reports/tables/megascale_domains_in_single_dms.csv
+A  reports/tables/megascale_inspection_summary.txt
+A  reports/tables/megascale_name_census.csv
+A  reports/tables/megascale_numbering_check.csv
+A  reports/tables/megascale_quote_verification.txt
+A  reports/tables/proposed_training_ddg_domains.csv
+A  reports/tables/proposed_training_function_assays.csv
+A  reports/tables/proteingym_assay_summary.csv
+A  reports/tables/proteingym_direction_precheck.csv
+A  reports/tables/proteingym_direction_precheck_summary.json
+A  reports/tables/proteingym_download_inventory.csv
+A  reports/tables/sign_check_megascale.csv
+A  scripts/gates/gate_phase_02.py
+A  scripts/inspect_clinvar.py
+A  scripts/inspect_megascale.py
+A  scripts/inspect_proteingym.py
+A  scripts/inspect_proteingym_downloads.py
+A  scripts/propose_training_sets.py
+A  scripts/summarize_megascale.py
+A  scripts/verify_megascale_quotes.py
+M  scripts/zenodo_fetch.py
+A  tests/test_inspect_clinvar.py
+A  tests/test_inspect_megascale.py
+A  tests/test_inspect_proteingym.py
+A  tests/test_propose_training_sets.py
+A  tests/test_verify_megascale_quotes.py
+
+git diff --cached --stat:
+ PROGRESS.md                                        |   8 +
+ docs/data_cards/clinvar.md                         |  32 +
+ docs/data_cards/megascale.md                       |  50 ++
+ docs/data_cards/proteingym.md                      |  39 +
+ docs/label_definitions.md                          |  33 +
+ reports/AGENT_LOG.md                               |  18 +
+ reports/STATE.json                                 |   2 +-
+ reports/gates/phase_01_tip_verification.txt        |   3 +
+ reports/gates/phase_02_gate.txt                    |  18 +
+ reports/gates/phase_02_pytest.txt                  |   2 +
+ reports/tables/case_study_assays.csv               |   7 +
+ reports/tables/clinvar_category_values.csv         | 136 +++
+ reports/tables/clinvar_external_counts.csv         |  12 +
+ reports/tables/clinvar_inspection_summary.json     |  63 ++
+ reports/tables/clinvar_review_status_mapping.csv   |  11 +
+ reports/tables/clinvar_wt_mismatch_rates.csv       |   3 +
+ reports/tables/megascale_domain_summary.csv        | 984 +++++++++++++++++++++
+ reports/tables/megascale_domains_in_single_dms.csv | 984 +++++++++++++++++++++
+ reports/tables/megascale_inspection_summary.txt    |  14 +
+ reports/tables/megascale_name_census.csv           |   4 +
+ reports/tables/megascale_numbering_check.csv       | 984 +++++++++++++++++++++
+ reports/tables/megascale_quote_verification.txt    |  14 +
+ reports/tables/proposed_training_ddg_domains.csv   |  61 ++
+ .../tables/proposed_training_function_assays.csv   |  31 +
+ reports/tables/proteingym_assay_summary.csv        | 218 +++++
+ reports/tables/proteingym_direction_precheck.csv   |   6 +
+ .../proteingym_direction_precheck_summary.json     |  10 +
+ reports/tables/proteingym_download_inventory.csv   |  27 +
+ reports/tables/sign_check_megascale.csv            | 856 ++++++++++++++++++
+ scripts/gates/gate_phase_02.py                     | 137 +++
+ scripts/inspect_clinvar.py                         | 247 ++++++
+ scripts/inspect_megascale.py                       | 207 +++++
+ scripts/inspect_proteingym.py                      | 352 ++++++++
+ scripts/inspect_proteingym_downloads.py            | 100 +++
+ scripts/propose_training_sets.py                   |  57 ++
+ scripts/summarize_megascale.py                     |  54 ++
+ scripts/verify_megascale_quotes.py                 |  45 +
+ scripts/zenodo_fetch.py                            |   6 +-
+ tests/test_inspect_clinvar.py                      |  18 +
+ tests/test_inspect_megascale.py                    |  63 ++
+ tests/test_inspect_proteingym.py                   |  86 ++
+ tests/test_propose_training_sets.py                |  29 +
+ tests/test_verify_megascale_quotes.py              |   9 +
+ 43 files changed, 6037 insertions(+), 3 deletions(-)

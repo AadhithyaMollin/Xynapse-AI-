@@ -1,0 +1,63 @@
+{
+  "source_url": "https://ftp.ncbi.nlm.nih.gov/pub/clinvar/tab_delimited/variant_summary.txt.gz",
+  "retrieved_at_utc": "2026-11-26T11:04:41.097480+00:00",
+  "source_size_bytes": 458570768,
+  "source_sha256": "1d910abfb5b576d92abcf042e118dd7ae1c6cf9e91382931093ae5555816206a",
+  "total_rows_scanned": 9356209,
+  "gene_to_protein": {
+    "TP53": "P04637",
+    "PTEN": "P60484"
+  },
+  "uniprot_evidence": {
+    "P04637": {
+      "url": "https://rest.uniprot.org/uniprotkb/P04637.json",
+      "sha256": "7951d14e182511ea11d2a0991fee9c2f6a6bbf9475d8b7a2aca5247e615e17cb",
+      "size": 848769,
+      "gene_symbols": [
+        "TP53"
+      ],
+      "uniprot_id": "P53_HUMAN",
+      "sequence_length": 393,
+      "cache_path": "data/raw/clinvar/uniprot_P04637.json"
+    },
+    "P60484": {
+      "url": "https://rest.uniprot.org/uniprotkb/P60484.json",
+      "sha256": "5f309f007a9131262d7f4bbc4e81a8358ce00a257ab095256ae385a6449a986b",
+      "size": 218590,
+      "gene_symbols": [
+        "PTEN"
+      ],
+      "uniprot_id": "PTEN_HUMAN",
+      "sequence_length": 403,
+      "cache_path": "data/raw/clinvar/uniprot_P60484.json"
+    }
+  },
+  "parsed_gene_candidates": 2659,
+  "sequence_checked_rows": 2659,
+  "retained_after_significance_review_filters_and_dedupe": 646,
+  "conflicting_label_rows_dropped": 0,
+  "star_mapping": {
+    "-": 0,
+    "criteria provided, conflicting classifications": -1,
+    "criteria provided, multiple submitters, no conflicts": 2,
+    "criteria provided, single submitter": 1,
+    "no assertion criteria provided": 0,
+    "no classification for the single variant": 0,
+    "no classification provided": 0,
+    "no classifications from unflagged records": 0,
+    "practice guideline": 4,
+    "reviewed by expert panel": 3
+  },
+  "significance_mapping": {
+    "Pathogenic": 1,
+    "Likely pathogenic": 1,
+    "Pathogenic/Likely pathogenic": 1,
+    "Benign": 0,
+    "Likely benign": 0,
+    "Benign/Likely benign": 0
+  },
+  "assembly_filter": "GRCh38",
+  "type_filter": "single nucleotide variant",
+  "minimum_review_stars": 1,
+  "duplicate_rule": "drop conflicting labels; for consistent duplicates retain the highest review star then smallest VariationID"
+}

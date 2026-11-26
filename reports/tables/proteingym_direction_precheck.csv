@@ -1,0 +1,6 @@
+DMS_id,DMS_filename,raw_DMS_phenotype_name,selection_type,coarse_selection_type,binary_label_column,n_aligned_single_mutants,spearman_binary_label_esm_llr,n_proline_substitutions,n_proline_label_1,assay_rho_positive,label_1_is_tolerated_global,proline_labelled_damaging_fraction
+A0A1I9GEU1_NEIME_Kennouche_2019,A0A1I9GEU1_NEIME_Kennouche_2019.csv,piliation_log2_ratio,,Activity,DMS_score_bin,922,-0.056194566371370276,59,32,False,True,0.4576271186440678
+AICDA_HUMAN_Gajula_2014_3cycles,AICDA_HUMAN_Gajula_2014_3cycles.csv,DMS_score,bulk RNA-sequencing,Activity,DMS_score_bin,209,-0.16417996387746092,10,2,False,True,0.8
+B2L11_HUMAN_Dutta_2010_binding-Mcl-1,B2L11_HUMAN_Dutta_2010_binding-Mcl-1.csv,score,FACS,Binding,DMS_score_bin,170,0.14773280563757568,10,2,True,True,0.8
+CALM1_HUMAN_Weile_2017,CALM1_HUMAN_Weile_2017.csv,screenscore,complementation,OrganismalFitness,DMS_score_bin,1813,0.17702606313817146,82,30,True,True,0.6341463414634146
+CASP3_HUMAN_Roychowdhury_2020,CASP3_HUMAN_Roychowdhury_2020.csv,coef,,Activity,DMS_score_bin,1567,0.5048378904012403,85,24,True,True,0.7176470588235294

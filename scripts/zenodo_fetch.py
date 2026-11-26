@@ -135,6 +135,8 @@ def fetch_member(record: int, archive: str, member: str, dest: Path) -> dict:
     remote = HTTPRangeFile(url)
     with zipfile.ZipFile(remote) as zf:
         info = zf.getinfo(member)
+        if info.compress_size > 500_000_000:
+            raise ValueError(f"Compressed member is {info.compress_size} bytes, over the 500 MB cap")
 
     # Parse the local file header to find where the compressed data starts.
     header_reader = HTTPRangeFile(url)
@@ -197,10 +199,10 @@ def fetch_url_member(url: str, member: str, dest: Path, verify: bool = True) -> 
 
     validate_url_host(url)
     remote = HTTPRangeFile(url, verify=verify)
-    if remote.size > 500_000_000:
-        raise ValueError(f"Download source is {remote.size} bytes, over the 500 MB cap")
     with zipfile.ZipFile(remote) as archive:
         info = archive.getinfo(member)
+        if info.compress_size > 500_000_000:
+            raise ValueError(f"Compressed member is {info.compress_size} bytes, over the 500 MB cap")
         header_reader = HTTPRangeFile(url, verify=verify)
         header_reader.seek(info.header_offset)
         header = header_reader.read(30)

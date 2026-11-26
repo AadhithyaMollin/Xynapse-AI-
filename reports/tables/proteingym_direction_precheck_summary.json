@@ -1,0 +1,10 @@
+{
+  "n_assays": 5,
+  "mean_spearman_binary_label_esm_llr": 0.12184444578563125,
+  "mean_absolute_spearman": 0.20999425788516374,
+  "assay_signs_disagree": true,
+  "label_1_is_tolerated_by_pooled_mean": true,
+  "project_label_formula": "1 - source_binary_label",
+  "direction_evidence_status": "mixed_assay_signs",
+  "policy_note": "Pooled-mean direction is used to continue at owner request; mixed assay signs remain an unresolved limitation."
+}

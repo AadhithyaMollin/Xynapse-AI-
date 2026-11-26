@@ -1,0 +1,136 @@
+column,value,count
+Assembly,GRCh37,4697420
+Assembly,GRCh38,4644440
+Assembly,NCBI36,4771
+Assembly,na,9578
+Type,Complex,106
+Type,Deletion,375383
+Type,Duplication,162671
+Type,Indel,42596
+Type,Insertion,32492
+Type,Inversion,3228
+Type,Microsatellite,83001
+Type,Tandem duplication,1
+Type,Translocation,358
+Type,Variation,1626
+Type,copy number gain,32777
+Type,copy number loss,30582
+Type,fusion,5
+Type,protein only,93
+Type,single nucleotide variant,8591290
+ClinicalSignificance,-,490021
+ClinicalSignificance,Affects,261
+ClinicalSignificance,Benign,393817
+ClinicalSignificance,Benign/Likely benign,169504
+ClinicalSignificance,Benign/Likely benign; association,6
+ClinicalSignificance,Benign/Likely benign; drug response,6
+ClinicalSignificance,Benign/Likely benign; drug response; other,6
+ClinicalSignificance,Benign/Likely benign; other,22
+ClinicalSignificance,Benign/Likely benign; other; risk factor,2
+ClinicalSignificance,Benign/Likely benign; risk factor,2
+ClinicalSignificance,Benign; Affects,8
+ClinicalSignificance,Benign; Affects; association; other,2
+ClinicalSignificance,Benign; association,18
+ClinicalSignificance,Benign; confers sensitivity,2
+ClinicalSignificance,Benign; drug response,6
+ClinicalSignificance,Benign; other,24
+ClinicalSignificance,Benign; protective,8
+ClinicalSignificance,Benign; risk factor,36
+ClinicalSignificance,Conflicting classifications of pathogenicity,368571
+ClinicalSignificance,Conflicting classifications of pathogenicity; Affects,2
+ClinicalSignificance,Conflicting classifications of pathogenicity; association,14
+ClinicalSignificance,Conflicting classifications of pathogenicity; association; risk factor,4
+ClinicalSignificance,Conflicting classifications of pathogenicity; drug response,6
+ClinicalSignificance,Conflicting classifications of pathogenicity; drug response; other,2
+ClinicalSignificance,Conflicting classifications of pathogenicity; other,38
+ClinicalSignificance,Conflicting classifications of pathogenicity; other; risk factor,4
+ClinicalSignificance,Conflicting classifications of pathogenicity; protective,4
+ClinicalSignificance,Conflicting classifications of pathogenicity; risk factor,32
+ClinicalSignificance,Established risk allele,4
+ClinicalSignificance,Established risk allele; association,2
+ClinicalSignificance,Established risk allele; association; protective,2
+ClinicalSignificance,Likely benign,2294741
+ClinicalSignificance,Likely benign; association,2
+ClinicalSignificance,Likely benign; drug response,6
+ClinicalSignificance,Likely benign; drug response; other,8
+ClinicalSignificance,Likely benign; other,22
+ClinicalSignificance,Likely benign; risk factor,4
+ClinicalSignificance,Likely pathogenic,270953
+ClinicalSignificance,"Likely pathogenic, low penetrance",117
+ClinicalSignificance,"Likely pathogenic/Likely pathogenic, low penetrance",8
+ClinicalSignificance,Likely pathogenic/Likely risk allele,30
+ClinicalSignificance,"Likely pathogenic/Pathogenic, low penetrance",16
+ClinicalSignificance,Likely pathogenic; Affects,2
+ClinicalSignificance,Likely pathogenic; association,10
+ClinicalSignificance,Likely pathogenic; drug response,34
+ClinicalSignificance,Likely pathogenic; risk factor,8
+ClinicalSignificance,Likely risk allele,172
+ClinicalSignificance,Pathogenic,417055
+ClinicalSignificance,"Pathogenic, low penetrance",163
+ClinicalSignificance,Pathogenic/Likely pathogenic,91679
+ClinicalSignificance,"Pathogenic/Likely pathogenic, low penetrance",6
+ClinicalSignificance,Pathogenic/Likely pathogenic/Established risk allele,2
+ClinicalSignificance,"Pathogenic/Likely pathogenic/Likely pathogenic, low penetrance",2
+ClinicalSignificance,Pathogenic/Likely pathogenic/Likely risk allele,10
+ClinicalSignificance,"Pathogenic/Likely pathogenic/Pathogenic, low penetrance",16
+ClinicalSignificance,"Pathogenic/Likely pathogenic/Pathogenic, low penetrance/Established risk allele; risk factor",2
+ClinicalSignificance,"Pathogenic/Likely pathogenic/Pathogenic, low penetrance; other",2
+ClinicalSignificance,Pathogenic/Likely pathogenic; association,2
+ClinicalSignificance,Pathogenic/Likely pathogenic; drug response,4
+ClinicalSignificance,Pathogenic/Likely pathogenic; other,16
+ClinicalSignificance,Pathogenic/Likely pathogenic; risk factor,10
+ClinicalSignificance,Pathogenic/Likely risk allele,16
+ClinicalSignificance,"Pathogenic/Pathogenic, low penetrance",10
+ClinicalSignificance,"Pathogenic/Pathogenic, low penetrance; other",2
+ClinicalSignificance,"Pathogenic/Pathogenic, low penetrance; risk factor",2
+ClinicalSignificance,Pathogenic; Affects,16
+ClinicalSignificance,Pathogenic; association,8
+ClinicalSignificance,Pathogenic; confers sensitivity,2
+ClinicalSignificance,Pathogenic; drug response,81
+ClinicalSignificance,Pathogenic; other,140
+ClinicalSignificance,Pathogenic; protective,4
+ClinicalSignificance,Pathogenic; risk factor,45
+ClinicalSignificance,Uncertain risk allele,72
+ClinicalSignificance,Uncertain risk allele; risk factor,2
+ClinicalSignificance,Uncertain significance,4832330
+ClinicalSignificance,Uncertain significance/Uncertain risk allele,278
+ClinicalSignificance,Uncertain significance/VUS-high,58
+ClinicalSignificance,Uncertain significance/VUS-low,18
+ClinicalSignificance,Uncertain significance/VUS-mid,28
+ClinicalSignificance,Uncertain significance; Affects,2
+ClinicalSignificance,Uncertain significance; Pathogenic/Likely pathogenic,2
+ClinicalSignificance,Uncertain significance; association,12
+ClinicalSignificance,Uncertain significance; drug response,16
+ClinicalSignificance,Uncertain significance; other,22
+ClinicalSignificance,Uncertain significance; risk factor,14
+ClinicalSignificance,VUS-high,146
+ClinicalSignificance,VUS-low,58
+ClinicalSignificance,VUS-mid,155
+ClinicalSignificance,association,678
+ClinicalSignificance,association not found,8
+ClinicalSignificance,association; drug response; risk factor,2
+ClinicalSignificance,association; risk factor,2
+ClinicalSignificance,confers sensitivity,20
+ClinicalSignificance,confers sensitivity; other,2
+ClinicalSignificance,conflicting data from submitters,312
+ClinicalSignificance,drug response,3796
+ClinicalSignificance,drug response; other,2
+ClinicalSignificance,drug response; risk factor,4
+ClinicalSignificance,no classification for the single variant,1383
+ClinicalSignificance,no classifications from unflagged records,465
+ClinicalSignificance,not provided,14567
+ClinicalSignificance,other,3055
+ClinicalSignificance,other; risk factor,2
+ClinicalSignificance,protective,82
+ClinicalSignificance,protective; risk factor,8
+ClinicalSignificance,risk factor,744
+ReviewStatus,-,490021
+ReviewStatus,"criteria provided, conflicting classifications",367930
+ReviewStatus,"criteria provided, multiple submitters, no conflicts",1536873
+ReviewStatus,"criteria provided, single submitter",6652497
+ReviewStatus,no assertion criteria provided,246441
+ReviewStatus,no classification for the single variant,1383
+ReviewStatus,no classification provided,14565
+ReviewStatus,no classifications from unflagged records,465
+ReviewStatus,practice guideline,116
+ReviewStatus,reviewed by expert panel,45918

@@ -1,0 +1,4 @@
+name_class,count,examples
+wild_type_like,1562,1A32.pdb | 1B7I.pdb | 1B7J.pdb
+single_substitution,1025049,1A32.pdb_A45D | 1A32.pdb_A45E | 1A32.pdb_A45F
+other,814674,1C99.pdb | 1C99.pdb_wte | 1C99.pdb_wth

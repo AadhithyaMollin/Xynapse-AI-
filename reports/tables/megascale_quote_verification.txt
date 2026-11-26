@@ -1,0 +1,14 @@
+Predictions are computational hypotheses, not experimental findings.
+Source URL: https://www.biorxiv.org/content/10.1101/2022.12.06.519132v1.full
+Retrieved date: 2026-11-26
+Source bytes: 817298
+Source SHA-256: 7f230b4f7feec3732a241663a6958820839ad443fa44b8b010be5e42c62b5813
+Resolution: the supplied range wording is a clause in the longer exact sentence quoted below.
+PASS: source_ddg_direction
+  "All ΔΔG measurements are in the original wild-type background; positive ΔΔG indicates stabilizing substitutions."
+PASS: pross_ddg_direction
+  "ΔΔG indicates the stability of the PROSS design (ΔG) minus the stability of the original wild-type sequence; positive ΔΔG indicates the design stabilized the domain."
+PASS: reliability_ci
+  "black corner slashes indicate lower confidence ΔG estimates, (95% confidence interval > 0.5 kcal/mol), including ΔG estimates near the edges of the dynamic range."
+PASS: reliability_range
+  "All folding stability data were clipped between from -1 to 5 (kcal/mol) because the folding stability outside the dynamic range is not reliable, and then the average of the stability for 20 amino acids for each site was subtracted from the data."
