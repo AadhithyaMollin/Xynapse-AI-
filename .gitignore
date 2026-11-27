@@ -13,7 +13,7 @@ __pycache__/
 .venv/
 .DS_Store
 
-# Ignore model artifacts by default; publish only the named teammate handoff files.
+# Ignore model artifacts by default; publish only the approved compact model bundles.
 models/*
 !models/.gitkeep
 !models/*/
@@ -34,3 +34,4 @@ reports/tables/*.parquet
 !models/esm2_t12_35M_handoff/team_handoff/function_tier1.joblib
 !models/esm2_t12_35M_handoff/team_handoff/function_logistic_tier1.joblib
 !models/esm2_t12_35M_handoff/xynapse_ai_team_model_files_esm2_t12_35M.zip
+!models/esm2_t12_35M_handoff/xynapse_ai_esm2_t12_35M_model_bundle.zip

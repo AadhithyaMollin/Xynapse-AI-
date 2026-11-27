@@ -90,6 +90,7 @@ def test_pre_push_check_accepts_only_named_tier1_handoff_artifacts(tmp_path: Pat
         "models/esm2_t12_35M_handoff/team_handoff/function_tier1.joblib",
         "models/esm2_t12_35M_handoff/team_handoff/function_logistic_tier1.joblib",
         "models/esm2_t12_35M_handoff/xynapse_ai_team_model_files_esm2_t12_35M.zip",
+        "models/esm2_t12_35M_handoff/xynapse_ai_esm2_t12_35M_model_bundle.zip",
     )
     for name in artifact_paths:
         path = repo / name

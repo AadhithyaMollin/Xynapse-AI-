@@ -26,6 +26,7 @@ PUBLISHABLE_MODEL_ARTIFACTS = {
     "models/esm2_t12_35M_handoff/team_handoff/function_tier1.joblib",
     "models/esm2_t12_35M_handoff/team_handoff/function_logistic_tier1.joblib",
     "models/esm2_t12_35M_handoff/xynapse_ai_team_model_files_esm2_t12_35M.zip",
+    "models/esm2_t12_35M_handoff/xynapse_ai_esm2_t12_35M_model_bundle.zip",
 }
 SECRET_PATTERNS = [
     re.compile(rb"ghp_[A-Za-z0-9]{20,}"),
