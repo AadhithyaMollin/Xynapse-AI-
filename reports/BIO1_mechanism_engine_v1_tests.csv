@@ -1,0 +1,7 @@
+Test,Result
+No catalytic evidence,PASS
+Positive catalytic evidence,PASS
+Positive binding evidence,PASS
+Folding interpretation,PASS
+Interaction interpretation,PASS
+Allosteric interpretation,PASS

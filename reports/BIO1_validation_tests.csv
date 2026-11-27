@@ -1,0 +1,7 @@
+Test,Result
+Dataset contains 552 variants,PASS
+Both TP53 and PTEN are present,PASS
+No missing pLDDT values,PASS
+No missing PDB mappings,PASS
+No PDB reference mismatches,PASS
+All ClinVar VariationIDs are unique,PASS

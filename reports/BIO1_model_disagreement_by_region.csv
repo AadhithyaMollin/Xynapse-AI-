@@ -1,0 +1,10 @@
+protein_id,group,rows,source_label_disagreements,opposite_label_disagreements
+P60484,N-terminal,4163,1071,3092
+P60484,Middle,4186,1268,2918
+P60484,C-terminal,3994,969,3025
+P60484,is_active_site,34,4,30
+P04637,N-terminal,7515,1697,5818
+P04637,Middle,8233,3746,4487
+P04637,C-terminal,7644,1419,6225
+P04637,is_binding_site,253,111,142
+P04637,is_dna_binding,11935,5300,6635

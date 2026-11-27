@@ -1,0 +1,6 @@
+mechanism,evidence_required,interpretation
+Catalytic,Active site annotation,Possible effect on catalytic activity
+Binding,Binding site annotation,Possible effect on molecular binding
+Folding,Structural evidence,Possible effect on protein stability
+Interaction,Interface or contact evidence,Possible effect on protein interactions
+Allosteric,Supporting structural or literature evidence,Possible effect on long-range regulation

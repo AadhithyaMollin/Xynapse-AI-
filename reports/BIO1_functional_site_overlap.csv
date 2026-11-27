@@ -1,0 +1,13 @@
+protein_id,site_type,annotated_positions,variant_rows,unique_mutations,predicted_damaging_count,predicted_damaging_percent
+P60484,is_active_site,1,34,19,34,100.0
+P04637,is_active_site,0,0,0,0,
+P60484,is_binding_site,0,0,0,0,
+P04637,is_binding_site,4,253,76,140,55.34
+P60484,is_metal,0,0,0,0,
+P04637,is_metal,0,0,0,0,
+P60484,is_dna_binding,0,0,0,0,
+P04637,is_dna_binding,191,11935,3629,1137,9.53
+P60484,is_disulfide,0,0,0,0,
+P04637,is_disulfide,0,0,0,0,
+P60484,is_interface,0,0,0,0,
+P04637,is_interface,0,0,0,0,
