@@ -83,6 +83,40 @@ def test_pre_push_check_accepts_allowlisted_staged_file(tmp_path: Path, capsys):
     assert "PASS: allowlist" in capsys.readouterr().out
 
 
+def test_pre_push_check_accepts_only_named_tier1_handoff_artifacts(tmp_path: Path):
+    repo = _init_repo(tmp_path)
+    artifact_paths = (
+        "models/esm2_t12_35M_handoff/team_handoff/stability_tier1.joblib",
+        "models/esm2_t12_35M_handoff/team_handoff/function_tier1.joblib",
+        "models/esm2_t12_35M_handoff/team_handoff/function_logistic_tier1.joblib",
+        "models/esm2_t12_35M_handoff/xynapse_ai_team_model_files_esm2_t12_35M.zip",
+    )
+    for name in artifact_paths:
+        path = repo / name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(b"verified handoff artifact")
+    _git(repo, "add", *artifact_paths)
+
+    _, failures = pre_push_check.check(repo)
+
+    assert failures == []
+    assert pre_push_check.allowed_path(artifact_paths[0]) == (
+        True, "approved tier-1 model handoff artifact"
+    )
+
+
+def test_pre_push_check_still_rejects_unapproved_model_binary(tmp_path: Path):
+    repo = _init_repo(tmp_path)
+    path = repo / "models" / "esm2_t12_35M" / "stability_tier1.joblib"
+    path.parent.mkdir(parents=True)
+    path.write_bytes(b"not approved for publication")
+    _git(repo, "add", "models/esm2_t12_35M/stability_tier1.joblib")
+
+    _, failures = pre_push_check.check(repo)
+
+    assert "allowlist and forbidden locations/extensions" in failures
+
+
 def test_pre_push_check_rejects_data_and_secret(tmp_path: Path):
     repo = _init_repo(tmp_path)
     (repo / "data" / "raw").mkdir(parents=True)

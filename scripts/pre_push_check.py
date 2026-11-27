@@ -21,6 +21,12 @@ DIR_ROOTS = {"src", "scripts", "tests", "configs", "docs", "app", "reports", "de
 PLACEHOLDER_ROOTS = {"data/raw", "data/interim", "data/external", "data/processed", "models", "logs", "notebooks"}
 TEXT_REPORT_EXT = {".md", ".txt", ".csv", ".json", ".png"}
 BLOCKED_EXT = {".joblib", ".pkl", ".pt", ".bin", ".zip", ".gz", ".tar", ".tgz"}
+PUBLISHABLE_MODEL_ARTIFACTS = {
+    "models/esm2_t12_35M_handoff/team_handoff/stability_tier1.joblib",
+    "models/esm2_t12_35M_handoff/team_handoff/function_tier1.joblib",
+    "models/esm2_t12_35M_handoff/team_handoff/function_logistic_tier1.joblib",
+    "models/esm2_t12_35M_handoff/xynapse_ai_team_model_files_esm2_t12_35M.zip",
+}
 SECRET_PATTERNS = [
     re.compile(rb"ghp_[A-Za-z0-9]{20,}"),
     re.compile(rb"github_pat_[A-Za-z0-9_]{20,}"),
@@ -39,6 +45,8 @@ def allowed_path(name: str) -> tuple[bool, str]:
         return False, "generated/system file"
     if path.name == ".env" or path.name.startswith(".env."):
         return False, "environment file"
+    if name in PUBLISHABLE_MODEL_ARTIFACTS:
+        return True, "approved tier-1 model handoff artifact"
     if path.suffix.lower() in BLOCKED_EXT or (path.suffix.lower() == ".parquet" and not name.startswith("demo_data/")):
         return False, "forbidden extension or Parquet location"
     if name in ROOT_FILES:
