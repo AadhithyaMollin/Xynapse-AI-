@@ -1,0 +1,141 @@
+{
+  "archive": "xynapse_ai_esm2_t12_35M_model_bundle.zip",
+  "archive_bytes": 516635,
+  "archive_sha256": "611ab92e2d4569155f4cf8625017674368b5d9f898a800ddaaa13835ae4239c0",
+  "disclaimer": "Predictions are computational hypotheses, not experimental findings.",
+  "esm_model": "facebook/esm2_t12_35M_UR50D",
+  "esm_model_short": "esm2_t12_35M",
+  "files": {
+    "FROZEN.json": {
+      "bytes": 1365,
+      "frozen": true,
+      "purpose": "Frozen inventory of model-file hashes, thresholds, feature lists, and ESM identity.",
+      "sha256": "655f61ab8a5ab6a9a2fd73d6e08233d43d23eac1a80dfc0342d56e3150620f9c"
+    },
+    "function_calibrator_tier1.joblib": {
+      "bytes": 2311,
+      "calibration_method": "isotonic",
+      "derived_from": "function_tier1.joblib",
+      "derived_from_sha256": "e7a8d9f5f3d0e19450f7bfd178c9dd37aab3123d77c22b53634478bf53d3ded2",
+      "frozen": false,
+      "purpose": "Standalone copy of the selected production calibrator for handoff; selected calibration is isotonic.",
+      "sha256": "80554be5833e4bc7ff58ed82c49804043faf838e14b3a6b834662ee5602826af"
+    },
+    "function_logistic_tier1.joblib": {
+      "bytes": 5562,
+      "frozen": true,
+      "purpose": "Frozen auxiliary logistic-regression comparison baseline; this is not the selected calibrator.",
+      "sha256": "554433453d26ab00a3cde8b12b95f6bd9d042e6be780e88418bc40ca159f391f"
+    },
+    "function_tier1.joblib": {
+      "bytes": 706411,
+      "frozen": true,
+      "purpose": "Tier-1 function inference bundle: fitted function estimator plus selected isotonic calibrator.",
+      "sha256": "e7a8d9f5f3d0e19450f7bfd178c9dd37aab3123d77c22b53634478bf53d3ded2"
+    },
+    "function_tier1.json": {
+      "bytes": 3099,
+      "frozen": true,
+      "purpose": "Function feature inventory, calibration metadata, and estimator filename.",
+      "sha256": "1bef735ea8af95ef3fb23ae7a097517bfe13fc73f7d15866869920e130d00a4a"
+    },
+    "stability_tier1.joblib": {
+      "bytes": 593500,
+      "frozen": true,
+      "purpose": "Tier-1 LightGBM stability regression estimator.",
+      "sha256": "901ba951209ca7ec34b35774ea8d43a3d0a6c775cf724690e72e5bf09da5b57a"
+    },
+    "stability_tier1.json": {
+      "bytes": 2171,
+      "frozen": true,
+      "purpose": "Stability feature inventory, training metadata, and estimator filename.",
+      "sha256": "d156f364f053c15234d1f1203f17edfcc75064f8df0c68aad54f0575d18b0b43"
+    }
+  },
+  "frozen_inventory_sha256": "655f61ab8a5ab6a9a2fd73d6e08233d43d23eac1a80dfc0342d56e3150620f9c",
+  "manifest_version": 2,
+  "notes": [
+    "Verify each SHA-256 before loading any serialized estimator.",
+    "The frozen function_tier1.joblib contains the production estimator and selected isotonic calibrator.",
+    "The frozen function_logistic_tier1.joblib is a comparison baseline, not the calibrator.",
+    "function_calibrator_tier1.joblib is a standalone copy of the selected isotonic calibrator.",
+    "The package does not contain training data or ESM weights."
+  ],
+  "selected_calibration_method": "isotonic",
+  "team_handoff": {
+    "archive": "xynapse_ai_team_model_files_esm2_t12_35M.zip",
+    "archive_bytes": 509349,
+    "archive_sha256": "8b72bd769a3174d93898c9290729c33b37c065d6ec85aa1385efa424d52f86a1",
+    "files": {
+      "function_logistic_tier1.joblib": {
+        "bytes": 879,
+        "calibration_method": "Platt scaling / logistic regression",
+        "n_oof_rows_fit": 71962,
+        "oof_table_sha256": "5e4ae4378a8117372eaf107d8fb414b1cbe413c3e7063ed95f87c01cfb2ea45a",
+        "purpose": "Standalone alternative function probability calibrator fit from saved grouped OOF scores; not the selected production isotonic calibrator.",
+        "sha256": "7e9c9d87d12fae7648f86a11092136a76593c05f504987bdf6c64796217054ad"
+      },
+      "function_tier1.joblib": {
+        "bytes": 706411,
+        "purpose": "Trained function prediction inference bundle (estimator plus selected isotonic calibration).",
+        "sha256": "e7a8d9f5f3d0e19450f7bfd178c9dd37aab3123d77c22b53634478bf53d3ded2",
+        "source_frozen_sha256": "e7a8d9f5f3d0e19450f7bfd178c9dd37aab3123d77c22b53634478bf53d3ded2"
+      },
+      "stability_tier1.joblib": {
+        "bytes": 593500,
+        "purpose": "Trained stability regression model.",
+        "sha256": "901ba951209ca7ec34b35774ea8d43a3d0a6c775cf724690e72e5bf09da5b57a",
+        "source_frozen_sha256": "901ba951209ca7ec34b35774ea8d43a3d0a6c775cf724690e72e5bf09da5b57a"
+      }
+    },
+    "manifest": {
+      "disclaimer": "Predictions are computational hypotheses, not experimental findings.",
+      "esm_model": "facebook/esm2_t12_35M_UR50D",
+      "esm_model_short": "esm2_t12_35M",
+      "files": {
+        "function_logistic_tier1.joblib": {
+          "bytes": 879,
+          "calibration_method": "Platt scaling / logistic regression",
+          "n_oof_rows_fit": 71962,
+          "oof_table_sha256": "5e4ae4378a8117372eaf107d8fb414b1cbe413c3e7063ed95f87c01cfb2ea45a",
+          "purpose": "Standalone alternative function probability calibrator fit from saved grouped OOF scores; not the selected production isotonic calibrator.",
+          "sha256": "7e9c9d87d12fae7648f86a11092136a76593c05f504987bdf6c64796217054ad"
+        },
+        "function_tier1.joblib": {
+          "bytes": 706411,
+          "purpose": "Trained function prediction inference bundle (estimator plus selected isotonic calibration).",
+          "sha256": "e7a8d9f5f3d0e19450f7bfd178c9dd37aab3123d77c22b53634478bf53d3ded2",
+          "source_frozen_sha256": "e7a8d9f5f3d0e19450f7bfd178c9dd37aab3123d77c22b53634478bf53d3ded2"
+        },
+        "stability_tier1.joblib": {
+          "bytes": 593500,
+          "purpose": "Trained stability regression model.",
+          "sha256": "901ba951209ca7ec34b35774ea8d43a3d0a6c775cf724690e72e5bf09da5b57a",
+          "source_frozen_sha256": "901ba951209ca7ec34b35774ea8d43a3d0a6c775cf724690e72e5bf09da5b57a"
+        }
+      },
+      "format_version": 1,
+      "notes": [
+        "The exact three requested filenames are present at the archive root.",
+        "function_logistic_tier1.joblib is a Platt probability calibrator fit on OOF scores, not the frozen logistic feature-model baseline.",
+        "The selected production calibrator is isotonic and is embedded in function_tier1.joblib; the logistic calibrator is an alternative for teammate workflows.",
+        "Do not copy this handoff set over models/esm2_t12_35M: its function_logistic_tier1.joblib intentionally has a different role from the frozen file of the same name.",
+        "The two primary model files retain their frozen SHA-256 values. No test-set rows were used to fit the Platt calibrator."
+      ],
+      "source_frozen_inventory_sha256": "655f61ab8a5ab6a9a2fd73d6e08233d43d23eac1a80dfc0342d56e3150620f9c",
+      "thresholds": {
+        "ddg_damaging": 0.676349007871,
+        "ddg_stabilizing": 0.0210001491369,
+        "p_impact_high": 0.58747815343,
+        "p_impact_low": null
+      }
+    },
+    "oof_table": "oof_function.parquet"
+  },
+  "thresholds": {
+    "ddg_damaging": 0.676349007871,
+    "ddg_stabilizing": 0.0210001491369,
+    "p_impact_high": 0.58747815343,
+    "p_impact_low": null
+  }
+}
