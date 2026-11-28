@@ -82,7 +82,11 @@ def _calibrated_probabilities(bundle: Mapping[str, Any], raw: np.ndarray) -> np.
     return np.clip(np.asarray(result, dtype=float), 0.0, 1.0)
 
 
-def predict_mutations(frame: pd.DataFrame, context: Mapping[str, Any]) -> pd.DataFrame:
+def predict_mutations(
+    frame: pd.DataFrame,
+    context: Mapping[str, Any],
+    protein_length: int | None = None,
+) -> pd.DataFrame:
     """Score a complete mutation frame; preserve available annotation evidence."""
     missing_keys = [column for column in MUT_KEYS if column not in frame]
     if missing_keys:
@@ -111,9 +115,19 @@ def predict_mutations(frame: pd.DataFrame, context: Mapping[str, Any]) -> pd.Dat
     output["esm_model"] = ESM_MODEL
     confidence_rows = []
     for row in output.to_dict(orient="records"):
-        protein_length = int(row.get("protein_length", row.get("length", 0)))
+        row_length = row.get("protein_length", row.get("length", None))
+        if row_length is None or pd.isna(row_length):
+            row_length = protein_length
+        if row_length is None:
+            raise ValueError(
+                "Protein length is required for confidence assessment; "
+                "provide a protein_length column or argument."
+            )
+        row_length = int(row_length)
+        if row_length <= 0:
+            raise ValueError("protein_length must be a positive integer")
         ddg_conf, func_conf, reasons = confidence_fields(
-            protein_length, stability_max, function_max, "tier1", row, config.get("confidence", {})
+            row_length, stability_max, function_max, "tier1", row, config.get("confidence", {})
         )
         confidence_rows.append((ddg_conf, func_conf, reasons))
     output["ddg_confidence"] = [values[0] for values in confidence_rows]

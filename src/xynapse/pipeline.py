@@ -150,7 +150,7 @@ def run_pipeline(
     features_path = project_root / "data/processed/features_tier1.parquet"
     model_dir = project_root / "models" / model_short
     context = load_prediction_context(model_dir, project_root / "configs/config.yaml", features_path)
-    predictions = predict_mutations(frame, context)
+    predictions = predict_mutations(frame, context, protein_length=len(sequence))
     stage_times["frozen_model_prediction_seconds"] = time.monotonic() - started
 
     output_dir.mkdir(parents=True, exist_ok=True)

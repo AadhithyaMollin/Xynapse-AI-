@@ -1,0 +1,24 @@
+{
+  "release": "BIO2_PTEN_v1",
+  "protein": "PTEN",
+  "uniprot": "P60484",
+  "created_utc": "2026-11-28T13:44:08.838354+00:00",
+  "artifacts": {
+    "PTEN_BIO2_mechanism_extension_confidence_corrected.parquet": {
+      "sha256": "212c7e2af6be84b7b260689fc819c3abb0edf7ecfffff9d92c66b689fdcae2ec",
+      "size_bytes": 505117
+    },
+    "PTEN_position_level_ranking.csv": {
+      "sha256": "38177daddf8ad1f38018ba1ff6066b5ad65fc57fa4dfc8c07e82407165c47b4b",
+      "size_bytes": 65217
+    },
+    "PTEN_Xynapse_ranked_mutations.csv": {
+      "sha256": "dd604db6074333ad3b4a8d85058751a3fdad5f6637ad66f9474a07422a4e762a",
+      "size_bytes": 8800001
+    },
+    "PTEN_Xynapse_Mutation_Interpretation_Report.md": {
+      "sha256": "ea7d5bffb9b98120624e2450a730984ed3d7efa9a0ab103544fa1b35fc7ad45c",
+      "size_bytes": 5920
+    }
+  }
+}
